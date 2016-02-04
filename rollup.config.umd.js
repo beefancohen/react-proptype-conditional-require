@@ -1,7 +1,6 @@
 import config from './rollup.config';
 
 config.format = 'umd';
-config.external = [ 'react' ];
 config.dest = 'dist/react-proptype-conditional-require.umd.js';
 config.moduleName = 'reactProptypeConditionalRequire';
 

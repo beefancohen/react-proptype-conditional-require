@@ -1,8 +1,8 @@
 {
-  "name": "proptype-conditional-require",
+  "name": "react-proptype-conditional-require",
   "version": "0.1.0",
   "description": "Conditionally require a React proptype based on other props and/or other conditions.",
-  "main": "index.js",
+  "main": "isRequiredIf.js",
   "scripts": {
     "lint": "eslint --config .eslintrc test/isRequiredIf.js isRequiredIf.js",
     "pretest": "rollup -c rollup.config.test.js",
