@@ -44,7 +44,7 @@ A function that takes the arguments (props, propName, componentName) and returns
   - propName - The current key of the prop object under validation.
   - componentName - The class of the React component.
 
-** All of the React built-in proptypes use this signature and you will usually use them to specify the validator**:
+**NOTE: All of the React built-in proptypes use this signature and you will usually use them to specify the validator**:
 
 ```js
 import React, { PropTypes } from 'react';
