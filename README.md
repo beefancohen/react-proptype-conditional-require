@@ -2,6 +2,12 @@
 
 Conditionally require propTypes based on other props and variables.
 
+# getting started
+
+```
+$ npm install --save react-proptype-conditional-require
+```
+
 # example
 
 ``` js
@@ -20,4 +26,38 @@ Hello.propTypes = {
   value: string
   className: isRequiredIf(string, (props, propName, componentName) => props.hasOwnProperty('value'))
 };
+```
+
+# usage
+
+This is a function that accepts a propType and a condition in which to enforce this propType for React components. The function uses the signature:
+
+```js
+import isRequiredIf from 'react-proptype-conditional-require';
+
+isRequiredIf(validator, conditional)
+```
+
+## validator
+A function that takes the arguments (props, propName, componentName) and returns an Error object if the validation fails. Do not `console.warn` or `throw`.
+  - props - An object containing all of the props passed to the instance.
+  - propName - The current key of the prop object under validation.
+  - componentName - The class of the React component.
+
+** All of the React built-in proptypes use this signature and you will usually use them to specify the validator**:
+
+```js
+import React, { PropTypes } from 'react';
+
+const { string, bool } = PropTypes;
+
+...
+
+Component.propTypes = {
+  first: isRequiredIf(string, true),
+  second: isRequiredIf(bool, false)
+}
+
+...
+
 ```
