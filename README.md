@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/evcohen/react-proptype-conditional-require.svg?branch=master)](https://travis-ci.org/evcohen/react-proptype-conditional-require)
+
 # react-proptype-conditional-require
 
 Conditionally require propTypes based on other props and variables.
