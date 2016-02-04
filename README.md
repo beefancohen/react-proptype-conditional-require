@@ -11,8 +11,8 @@
     <img src="https://img.shields.io/badge/license-MIT-blue.svg"
          alt="license">
   </a>
-  <a href="http://codecov.io/github/evcohen/react-proptype-conditional-require?branch=master">
-    <img src="http://codecov.io/github/evcohen/react-proptype-conditional-require/coverage.svg?branch=master" alt="Coverage via Codecov" />
+  <a href='https://coveralls.io/github/evcohen/react-proptype-conditional-require?branch=master'>
+    <img src='https://coveralls.io/repos/github/evcohen/react-proptype-conditional-require/badge.svg?branch=master' alt='Coverage Status' />
   </a>
 </p>
 
