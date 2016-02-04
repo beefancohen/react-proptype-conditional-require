@@ -16,24 +16,29 @@ const isRequired = (condition, ...propsArgs) => {
 };
 
 const isCustomReactPropType = validator =>
-  Object.keys(PropTypes).some(propType => PropTypes[propType] !== validator);
+    Object.keys(PropTypes).every(propType => PropTypes[propType] !== validator);
 
-const existsAndIsValid = (validator, props, propName, componentName) => {
-  if (props.hasOwnProperty(propName) && Boolean(props[propName])) {
-    return validator(props, propName, componentName);
+const propExists = (props, propName, componentName) => {
+  if (!props.hasOwnProperty(propName) || !Boolean(props[propName])) {
+    return new Error(
+      `Warning: Failed propType: Required ${props[propName]} \`${propName}\`` +
+      ` was not specified in \`${componentName}\`.`
+    );
   }
 
-  return new Error(
-    `Warning: Failed propType: Required ${props[propName]} \`${propName}\`
-    was not specified in \`${componentName}\`.`
-  );
+  return true;
 };
 
 const isRequiredIf = (validator, condition) =>
   (props, propName, componentName) => {
     if (isRequired(condition, props, propName, componentName)) {
       if (isCustomReactPropType(validator)) {
-        return existsAndIsValid(validator, props, propName, componentName);
+        const exists = propExists(props, propName, componentName);
+        if (exists instanceof Error) {
+          return exists;
+        }
+
+        return validator(props, propName, componentName);
       }
 
       return validator.isRequired(props, propName, componentName);
