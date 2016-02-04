@@ -1,6 +1,6 @@
 {
   "name": "proptype-conditional-require",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Conditionally require a React proptype based on other props and/or other conditions.",
   "main": "index.js",
   "scripts": {
