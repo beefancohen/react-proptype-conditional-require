@@ -34,6 +34,7 @@
     "eslint": "^1.10.3",
     "eslint-plugin-react": "^3.16.1",
     "faucet": "0.0.1",
+    "istanbul": "^0.4.2",
     "react-unit": "^1.1.1",
     "rollup": "^0.25.2",
     "rollup-plugin-babel": "^2.3.9",
