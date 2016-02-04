@@ -7,6 +7,7 @@
     "lint": "eslint --config .eslintrc test/isRequiredIf.js isRequiredIf.js",
     "pretest": "rollup -c rollup.config.test.js",
     "test": "tape build/test-bundle.js | faucet",
+    "ci:build": "npm run pretest && npm run ci:test",
     "ci:test": "npm run pretest && npm run test:coverage && nyc report --reporter=text-lcov | coveralls",
     "test:coverage": "nyc --reporter=lcov --reporter=text-lcov npm test",
     "prebuild": "npm run lint",
