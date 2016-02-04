@@ -7,6 +7,6 @@ export default {
   format: 'cjs',
   external: [ 'react', 'tape' ],
   intro: 'require("source-map-support").install();',
-  dest: 'build/test-bundle.js',
+  dest: 'test/bundle.js',
   sourceMap: true
 };

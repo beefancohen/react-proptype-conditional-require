@@ -3,3 +3,5 @@ build
 dist
 npm-debug.log
 coverage
+test/bundle.js*
+.nyc_output
