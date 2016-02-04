@@ -4,7 +4,7 @@
   ],
 
   "presets": [
-    "es2015",
-    "react"
+    "react",
+    "es2015-rollup"
   ]
 }

@@ -1,5 +1,6 @@
-import { PropTypes } from 'react';
+'use strict';
 
+import { PropTypes } from 'react';
 
 
 const isRequired = (condition, ...propsArgs) => {
