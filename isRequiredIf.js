@@ -4,12 +4,12 @@ import { PropTypes } from 'react';
 
 
 const propIsRequired = (condition, props, propName, componentName) => {
-  if (Boolean(condition)) {
-    if (typeof condition === 'boolean') {
-      return condition;
-    } else if (typeof condition === 'function') {
-      return condition(props, propName, componentName);
-    }
+  if (typeof condition === 'boolean') {
+    return condition;
+  } else if (typeof condition === 'function') {
+    return condition(props, propName, componentName);
+  } else if (Boolean(condition) === true) {
+    return Boolean(condition);
   }
 
   return false;

@@ -1,12 +1,12 @@
 {
   "name": "react-proptype-conditional-require",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Conditionally require a React proptype based on other props and/or other conditions.",
   "main": "index.js",
   "scripts": {
     "lint": "eslint --config .eslintrc test/isRequiredIf.js isRequiredIf.js",
     "pretest": "rollup -c rollup.config.test.js",
-    "test": "tape build/test-bundle.js | faucet",
+    "test": "istanbul cover --print=none build/test-bundle.js codecov | faucet",
     "prebuild": "npm run lint",
     "build": "rollup -c rollup.config.umd.js && rollup -c rollup.config.es6.js && rollup -c rollup.config.cjs.js",
     "prepublish": "npm run build"
@@ -30,6 +30,7 @@
     "babel-plugin-transform-object-rest-spread": "^6.3.13",
     "babel-preset-es2015-rollup": "^1.1.1",
     "babel-preset-react": "^6.3.13",
+    "codecov": "^1.0.1",
     "eslint": "^1.10.3",
     "eslint-plugin-react": "^3.16.1",
     "faucet": "0.0.1",

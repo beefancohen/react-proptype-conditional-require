@@ -1,4 +1,20 @@
-[![Build Status](https://travis-ci.org/evcohen/react-proptype-conditional-require.svg?branch=master)](https://travis-ci.org/evcohen/react-proptype-conditional-require)
+<p align="center">
+  <a href="https://travis-ci.org/evcohen/react-proptype-conditional-require">
+    <img src="https://api.travis-ci.org/evcohen/react-proptype-conditional-require.svg?branch=master"
+         alt="build status">
+  </a>
+  <a href="https://npmjs.org/package/react-proptype-conditional-require">
+    <img src="https://img.shields.io/npm/v/react-proptype-conditional-require.svg"
+         alt="npm version">
+  </a>
+  <a href="https://github.com/evcohen/react-proptype-conditional-require/blob/master/LICENSE.md">
+    <img src="https://img.shields.io/npm/l/react-proptype-conditional-require.svg"
+         alt="license">
+  </a>
+  <a href="http://codecov.io/github/evcohen/react-proptype-conditional-require?branch=master">
+    <img src="http://codecov.io/github/evcohen/react-proptype-conditional-require/coverage.svg?branch=master" alt="Coverage via Codecov" />
+  </a>
+</p>
 
 # react-proptype-conditional-require
 

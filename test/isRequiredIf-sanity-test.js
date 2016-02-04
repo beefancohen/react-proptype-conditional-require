@@ -23,6 +23,7 @@ test(
 test(
   "Prop is required and missing so it returns error and does not run validator",
   assert => {
+    /* istanbul ignore next */
     const validator = () => assert.fail('The validator has been run.');
 
     const props = {};
@@ -128,9 +129,10 @@ test(
 test(
   "Prop is required based on function but returns error because it is missing",
   assert => {
+    /* istanbul ignore next */
     const valid = () => assert.fail('The validator has been run.');
 
-    // will return false, so foo is not required.
+    // will return true, so foo is required.
     const condition = props => props.hasOwnProperty('bar');
 
     const props = { bar: 'x' };
@@ -155,13 +157,62 @@ test(
       assert.end();
     };
 
-    const condition = props => props.hasOwnProperty('foo');
+    // will return true, so foo is required.
+    const condition = props => props.hasOwnProperty('bar');
 
     const props = { bar: 'x', foo: 'y' };
     const propName = 'foo';
     const componentName = 'FooComponent';
 
     isRequiredIf(validator, condition)(props, propName, componentName);
+  }
+);
+
+test(
+  "Prop is not required because condition is undefined",
+  assert => {
+    const validator = () => {
+      assert.pass('The validator has been run.');
+      assert.end();
+    };
+
+    const props = { bar: 'x' };
+    const propName = 'foo';
+    const componentName = 'FooComponent';
+
+    isRequiredIf(validator, undefined)(props, propName, componentName);
+  }
+);
+
+test(
+  "Prop is not required because condition is null",
+  assert => {
+    const validator = () => {
+      assert.pass('The validator has been run.');
+      assert.end();
+    };
+
+    const props = { bar: 'x' };
+    const propName = 'foo';
+    const componentName = 'FooComponent';
+
+    isRequiredIf(validator, null)(props, propName, componentName);
+  }
+);
+
+test(
+  "Prop is required because condition is a truthy value",
+  assert => {
+    const validator = () => {
+      assert.pass('The validator has been run.');
+      assert.end();
+    };
+
+    const props = { foo: 'x' };
+    const propName = 'foo';
+    const componentName = 'FooComponent';
+
+    isRequiredIf(validator, props)(props, propName, componentName);
   }
 );
 
