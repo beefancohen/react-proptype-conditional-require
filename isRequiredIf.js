@@ -3,12 +3,12 @@
 import { PropTypes } from 'react';
 
 
-const isRequired = (condition, ...propsArgs) => {
+const propIsRequired = (condition, props, propName, componentName) => {
   if (Boolean(condition)) {
     if (typeof condition === 'boolean') {
       return condition;
     } else if (typeof condition === 'function') {
-      return condition(...propsArgs);
+      return condition(props, propName, componentName);
     }
   }
 
@@ -31,7 +31,7 @@ const propExists = (props, propName, componentName) => {
 
 const isRequiredIf = (validator, condition) =>
   (props, propName, componentName) => {
-    if (isRequired(condition, props, propName, componentName)) {
+    if (propIsRequired(condition, props, propName, componentName)) {
       if (isCustomReactPropType(validator)) {
         const exists = propExists(props, propName, componentName);
         if (exists instanceof Error) {
@@ -40,7 +40,6 @@ const isRequiredIf = (validator, condition) =>
 
         return validator(props, propName, componentName);
       }
-
       return validator.isRequired(props, propName, componentName);
     }
 
