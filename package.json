@@ -1,14 +1,14 @@
 {
   "name": "react-proptype-conditional-require",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Conditionally require a React proptype based on other props and/or other conditions.",
-  "main": "isRequiredIf.js",
+  "main": "index.js",
   "scripts": {
     "lint": "eslint --config .eslintrc test/isRequiredIf.js isRequiredIf.js",
     "pretest": "rollup -c rollup.config.test.js",
     "test": "tape build/test-bundle.js | tap-notify | faucet",
     "prebuild": "npm run lint",
-    "build": "rollup -c rollup.config.umd.js && rollup -c rollup.config.es6.js",
+    "build": "rollup -c rollup.config.umd.js && rollup -c rollup.config.es6.js && rollup -c rollup.config.cjs.js",
     "prepublish": "npm run build && npm test"
   },
   "keywords": [
