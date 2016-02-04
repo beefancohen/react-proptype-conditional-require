@@ -48,6 +48,7 @@ A function that takes the arguments (props, propName, componentName) and returns
 
 ```js
 import React, { PropTypes } from 'react';
+import isRequiredIf from 'react-proptype-conditional-require';
 
 const { string, bool } = PropTypes;
 
@@ -59,5 +60,30 @@ Component.propTypes = {
 }
 
 ...
-
 ```
+
+## conditional
+A boolean *or* function that returns a truthy value that indicates whether the prop is required or not. The function follows the same signature as the validator function: (props, propName, componentName). It should return a boolean, but any truthy value will do.
+
+A common use case:
+
+```js
+import React, { PropTypes } from 'react';
+import isRequiredIf from 'react-proptype-conditional-require';
+
+const { string } = PropTypes;
+
+...
+
+Component.propTypes = {
+  label: string,
+  labelClassName: isRequiredIf(string, props => props.hasOwnProperty('label'));
+}
+
+...
+```
+
+In that case, the labelClassName will only be required if label is passed.
+
+# license
+MIT
