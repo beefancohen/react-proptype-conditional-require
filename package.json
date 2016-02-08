@@ -6,8 +6,7 @@
   "scripts": {
     "lint": "eslint --config .eslintrc test/isRequiredIf.js isRequiredIf.js",
     "pretest": "rollup -c ./config/rollup.config.test.js",
-    "test": "tap --cov -R=spec test/bundle.js --timeout=60",
-    "coverage": "npm pretest && tap --cov --coverage-report=lcov test/bundle.js",
+    "test": "tap -c --cov -R=classic --coverage-report=text-lcov test/bundle.js --timeout=60",
     "ci:build": "npm run test && npm run build",
     "prebuild": "npm run lint",
     "build": "rollup -c ./config/rollup.config.cjs.js",
