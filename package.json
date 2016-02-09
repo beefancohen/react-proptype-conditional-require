@@ -1,15 +1,17 @@
 {
   "name": "react-proptype-conditional-require",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Conditionally require a React proptype based on other props and/or other conditions.",
   "main": "dist/react-proptype-conditional-require.js",
   "scripts": {
     "lint": "eslint --config .eslintrc test/isRequiredIf.js isRequiredIf.js",
-    "pretest": "rollup -c ./config/rollup.config.test.js",
-    "test": "tap -c --cov -R=classic --coverage-report=text-lcov test/bundle.js --timeout=60",
-    "ci:build": "npm run test && npm run build",
-    "prebuild": "npm run lint",
-    "build": "rollup -c ./config/rollup.config.cjs.js",
+    "pretest": "rollup -c rollup.config.test.js",
+    "test": "tape build/test-bundle.js | faucet",
+    "ci:test": "npm run pretest && npm run test:coverage && nyc report --reporter=text-lcov | coveralls",
+    "test:coverage": "nyc --reporter=lcov --reporter=text-lcov tape build/test-bundle.js",
+    "ci:build": "npm run lint && npm run ci:test",
+    "prebuild": "npm run lint && npm run test",
+    "build": "rollup -c rollup.config.cjs.js",
     "prepublish": "npm run build"
   },
   "repository": {
@@ -36,13 +38,15 @@
     "babel-preset-es2015-rollup": "^1.1.1",
     "babel-preset-react": "^6.3.13",
     "coveralls": "^2.11.6",
+
     "eslint": "^1.10.3",
     "eslint-plugin-react": "^3.16.1",
+    "faucet": "0.0.1",
+    "nyc": "^5.5.0",
     "rollup": "^0.25.2",
     "rollup-plugin-babel": "^2.3.9",
     "rollup-plugin-multi-entry": "^1.1.0",
     "source-map-support": "^0.4.0",
-    "tap": "^5.4.2",
     "tape": "^4.4.0"
   }
 }
