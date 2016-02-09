@@ -5,14 +5,15 @@
   "main": "dist/react-proptype-conditional-require.js",
   "scripts": {
     "lint": "eslint --config .eslintrc test/isRequiredIf.js isRequiredIf.js",
-    "pretest": "rollup -c rollup.config.test.js",
+    "pretest": "rollup -c ./config/rollup.config.test.js",
     "test": "tape build/test-bundle.js | faucet",
     "ci:test": "npm run pretest && npm run test:coverage && nyc report --reporter=text-lcov | coveralls",
-    "test:coverage": "nyc --reporter=lcov --reporter=text-lcov tape build/test-bundle.js",
-    "ci:build": "npm run lint && npm run ci:test",
-    "prebuild": "npm run lint && npm run test",
-    "build": "rollup -c rollup.config.cjs.js",
-    "prepublish": "npm run build"
+    "test:coverage": "nyc --reporter=lcov --reporter=text-lcov tape test/bundle.js",
+    "ci:build": "npm run ci:test && npm run build",
+    "prebuild": "npm run lint && npm run clean",
+    "build": "rollup -c ./config/rollup.config.cjs.js",
+    "prepublish": "npm run build",
+    "clean": "rm -rf test/bundle.js* dist coverage .nyc_output"
   },
   "repository": {
     "type": "git",
