@@ -1,5 +1,5 @@
 import test from 'tape';
-import isRequiredIf from '../isRequiredIf';
+import isRequiredIf from '../../isRequiredIf';
 
 
 test('Truthy conditional tests', nest => {

@@ -1,5 +1,5 @@
 import test from 'tape';
-import isRequiredIf from '../isRequiredIf';
+import isRequiredIf from '../../isRequiredIf';
 import { PropTypes } from 'react';
 
 const { string } = PropTypes;
