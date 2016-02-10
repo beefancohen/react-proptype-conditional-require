@@ -53,7 +53,10 @@ test('Boolean conditional tests', nest => {
       const err =
         isRequiredIf(typeValidator, true)(props, propName, componentName);
 
-      assert.ok(err instanceof Error);
+      assert.ok(
+        err instanceof Error,
+        'Returns an error because required prop is missing'
+      );
 
       assert.end();
     }

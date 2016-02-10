@@ -2,7 +2,7 @@ import test from 'tape';
 import isRequiredIf from '../../isRequiredIf';
 import React, { PropTypes } from 'react';
 import { createRenderer } from 'react-addons-test-utils';
-import { spy } from 'sinon';
+import { sandbox } from 'sinon';
 
 
 
@@ -13,17 +13,16 @@ const setup = () => {
 
   fixtures.renderer = createRenderer();
   fixtures.Component = props => <div>Hello {props.value}</div>;
-  fixtures.warn = spy(console, "error");
+  fixtures.sandbox = sandbox.create();
+  fixtures.warn = fixtures.sandbox.stub(console, "error").throws();
 
   return fixtures;
 };
 
 const teardown = fixtures => {
-  fixtures.warn.restore();
+  fixtures.sandbox.restore();
 
   fixtures = {};
-
-  return fixtures;
 };
 
 test('React component bool proptype tests', nest => {
@@ -34,25 +33,19 @@ test('React component bool proptype tests', nest => {
       const fixtures = setup();
       const {
         renderer,
-        Component,
-        warn
+        Component
       } = fixtures;
 
       Component.propTypes = {
         value: isRequiredIf(bool, false)
       };
 
-      renderer.render(<Component value={true} />);
-
-      assert.false(
-        warn.called,
+      assert.doesNotThrow(
+        () => {
+          renderer.render(<Component value={true} />);
+        },
+        undefined,
         'No warning was issued.'
-      );
-
-      assert.equals(
-        warn.args.length,
-        0,
-        'Warn was called with no args.'
       );
 
       teardown(fixtures);
@@ -68,18 +61,18 @@ test('React component bool proptype tests', nest => {
       const fixtures = setup();
       const {
         renderer,
-        Component,
-        warn
+        Component
       } = fixtures;
 
       Component.propTypes = {
         value: isRequiredIf(bool, false)
       };
 
-      renderer.render(<Component />);
-
-      assert.false(
-        warn.called,
+      assert.doesNotThrow(
+        () => {
+          renderer.render(<Component />);
+        },
+        undefined,
         'No warning was issued.'
       );
 
@@ -95,19 +88,19 @@ test('React component bool proptype tests', nest => {
       const fixtures = setup();
       const {
         renderer,
-        Component,
-        warn
+        Component
       } = fixtures;
 
       Component.propTypes = {
         value: isRequiredIf(bool, true)
       };
 
-      renderer.render(<Component />);
-
-      assert.ok(
-        warn.called,
-        'Warning was issued because required prop was missing.'
+      assert.throws(
+        () => {
+          renderer.render(<Component />);
+        },
+        Error,
+        'Throws because required prop is missing.'
       );
 
       teardown(fixtures);
@@ -122,18 +115,18 @@ test('React component bool proptype tests', nest => {
       const fixtures = setup();
       const {
         renderer,
-        Component,
-        warn
+        Component
       } = fixtures;
 
       Component.propTypes = {
         value: isRequiredIf(bool, true)
       };
 
-      renderer.render(<Component value={true} />);
-
-      assert.false(
-        warn.called,
+      assert.doesNotThrow(
+        () => {
+          renderer.render(<Component value={true} />);
+        },
+        undefined,
         'No warning was issued.'
       );
 
