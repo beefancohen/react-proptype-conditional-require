@@ -24,7 +24,7 @@
     "props"
   ],
   "author": "Ethan Cohen",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "react": "^0.14.7"
   },

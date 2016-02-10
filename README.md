@@ -8,7 +8,7 @@
          alt="npm version">
   </a>
   <a href="https://github.com/evcohen/react-proptype-conditional-require/blob/master/LICENSE.md">
-    <img src="https://img.shields.io/badge/license-MIT-blue.svg"
+    <img src="https://img.shields.io/npm/l/react-proptype-conditional-require.svg"
          alt="license">
   </a>
   <a href='https://coveralls.io/github/evcohen/react-proptype-conditional-require?branch=master'>
