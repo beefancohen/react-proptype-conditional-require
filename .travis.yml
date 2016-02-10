@@ -7,4 +7,5 @@ env:
   global:
     - BUILD_TIMEOUT=10000
 install: npm install
-script: npm run ci:build
+script: npm run build
+after_success: npm run coverage && npm run clean
