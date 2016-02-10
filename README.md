@@ -7,7 +7,7 @@
     <img src="https://img.shields.io/npm/v/react-proptype-conditional-require.svg"
          alt="npm version">
   </a>
-  <a href="https://github.com/evcohen/react-proptype-conditional-require/blob/master/LICENSE.md">
+  <a href="https://github.com/evcohen/react-proptype-conditional-require/blob/master/LICENSE">
     <img src="https://img.shields.io/npm/l/react-proptype-conditional-require.svg"
          alt="license">
   </a>
