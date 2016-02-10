@@ -29,8 +29,15 @@ const propExists = (props, propName, componentName) => {
   return true;
 };
 
-const isRequiredIf = (validator, condition) =>
-  (props, propName, componentName) => {
+const isRequiredIf = (validator, condition) => {
+  if (typeof validator !== 'function') {
+    throw new TypeError(
+      'The validator argument must be a function ' +
+      'with the signature function(props, propName, componentName).'
+    );
+  }
+
+  return (props, propName, componentName) => {
     if (propIsRequired(condition, props, propName, componentName)) {
       if (isCustomReactPropType(validator)) {
         const exists = propExists(props, propName, componentName);
@@ -46,5 +53,6 @@ const isRequiredIf = (validator, condition) =>
     // Is not required, so just run validator.
     return validator(props, propName, componentName);
   };
+};
 
 export default isRequiredIf;
