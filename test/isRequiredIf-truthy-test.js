@@ -4,8 +4,8 @@ import isRequiredIf from '../isRequiredIf';
 test(
   "Prop is required because condition is a truthy value",
   assert => {
-    const validator = () => {
-      assert.pass('The validator has been run.');
+    const typeValidator = () => {
+      assert.pass('The typeValidator has been run.');
       assert.end();
     };
 
@@ -13,15 +13,15 @@ test(
     const propName = 'foo';
     const componentName = 'FooComponent';
 
-    isRequiredIf(validator, props)(props, propName, componentName);
+    isRequiredIf(typeValidator, props)(props, propName, componentName);
   }
 );
 
 test(
   "Prop is not required because condition is null",
   assert => {
-    const validator = () => {
-      assert.pass('The validator has been run.');
+    const typeValidator = () => {
+      assert.pass('The typeValidator has been run.');
       assert.end();
     };
 
@@ -29,15 +29,15 @@ test(
     const propName = 'foo';
     const componentName = 'FooComponent';
 
-    isRequiredIf(validator, null)(props, propName, componentName);
+    isRequiredIf(typeValidator, null)(props, propName, componentName);
   }
 );
 
 test(
   "Prop is not required because condition is undefined",
   assert => {
-    const validator = () => {
-      assert.pass('The validator has been run.');
+    const typeValidator = () => {
+      assert.pass('The typeValidator has been run.');
       assert.end();
     };
 
@@ -45,6 +45,6 @@ test(
     const propName = 'foo';
     const componentName = 'FooComponent';
 
-    isRequiredIf(validator, undefined)(props, propName, componentName);
+    isRequiredIf(typeValidator, undefined)(props, propName, componentName);
   }
 );

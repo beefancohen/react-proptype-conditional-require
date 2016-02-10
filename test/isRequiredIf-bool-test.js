@@ -5,10 +5,10 @@ import { PropTypes } from 'react';
 const { string } = PropTypes;
 
 test(
-  "Prop is not required, so it validates against validator",
+  "Prop is not required, so it validates against typeValidator",
   assert => {
-    const validator = () => {
-      assert.pass('The validator has been run.');
+    const typeValidator = () => {
+      assert.pass('The typeValidator has been run.');
       assert.end();
     };
 
@@ -16,15 +16,15 @@ test(
     const propName = 'foo';
     const componentName = 'FooComponent';
 
-    isRequiredIf(validator, false)(props, propName, componentName);
+    isRequiredIf(typeValidator, false)(props, propName, componentName);
   }
 );
 
 test(
-  "Prop is required and missing so it returns error and does not run validator",
+  "Prop is required and missing so it returns error " +
+  "and does not run typeValidator",
   assert => {
-    /* istanbul ignore next */
-    const validator = () => assert.fail('The validator has been run.');
+    const typeValidator = () => assert.fail('The typeValidator has been run.');
 
     const props = {};
     const propName = 'foo';
@@ -32,7 +32,7 @@ test(
 
     assert.throws(
       () => {
-        throw isRequiredIf(validator, true)(props, propName, componentName);
+        throw isRequiredIf(typeValidator, true)(props, propName, componentName);
       }
     );
 
@@ -41,10 +41,10 @@ test(
 );
 
 test(
-  "Prop is required and present so it validates against the validator",
+  "Prop is required and present so it validates against the typeValidator",
   assert => {
-    const validator = () => {
-      assert.pass('The validator has been run.');
+    const typeValidator = () => {
+      assert.pass('The typeValidator has been run.');
       assert.end();
     };
 
@@ -52,12 +52,12 @@ test(
     const propName = 'foo';
     const componentName = 'FooComponent';
 
-    isRequiredIf(validator, true)(props, propName, componentName);
+    isRequiredIf(typeValidator, true)(props, propName, componentName);
   }
 );
 
 test(
-  "Prop is not required, so it validates against React built-in validator",
+  "Prop is not required, so it validates against React built-in typeValidator",
   assert => {
     const props = {};
     const propName = 'foo';
@@ -69,14 +69,14 @@ test(
     assert.equals(
       valid,
       null,
-      'The validator returns null because it is not required.'
+      'The typeValidator returns null because it is not required.'
     );
     assert.end();
   }
 );
 
 test(
-  "Prop is required and missing, so React built-in validator returns error",
+  "Prop is required and missing, so React built-in typeValidator returns error",
   assert => {
     const props = {};
     const propName = 'foo';
@@ -93,7 +93,7 @@ test(
 );
 
 test(
-  "Prop is required and present, so React built-in validator returns null",
+  "Prop is required and present, so React built-in typeValidator returns null",
   assert => {
     const props = { foo: 'abc' };
     const propName = 'foo';
@@ -102,7 +102,7 @@ test(
     const valid =
       isRequiredIf(string, true)(props, propName, componentName);
 
-    assert.equals(valid, null, 'The validator returns null.');
+    assert.equals(valid, null, 'The typeValidator returns null.');
     assert.end();
   }
 );

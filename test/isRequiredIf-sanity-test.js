@@ -13,42 +13,42 @@ test(
 );
 
 test(
-  'isRequiredIf function throws when validator arg is undefined',
+  'isRequiredIf function throws when typeValidator arg is undefined',
   assert => {
     assert.throws(
       () => {
         isRequiredIf(undefined, true);
       },
       TypeError,
-      'Should throw typeError because validator arg is undefined.'
+      'Should throw typeError because typeValidator arg is undefined.'
     );
     assert.end();
   }
 );
 
 test(
-  'isRequiredIf function throws when validator arg is null',
+  'isRequiredIf function throws when typeValidator arg is null',
   assert => {
     assert.throws(
       () => {
         isRequiredIf(null, true);
       },
       TypeError,
-      'Should throw typeError because validator arg is undefined.'
+      'Should throw typeError because typeValidator arg is undefined.'
     );
     assert.end();
   }
 );
 
 test(
-  'isRequiredIf function throws when validator arg is not a function',
+  'isRequiredIf function throws when typeValidator arg is not a function',
   assert => {
     assert.throws(
       () => {
         isRequiredIf(42, true);
       },
       TypeError,
-      'Should throw typeError because validator arg is undefined.'
+      'Should throw typeError because typeValidator arg is undefined.'
     );
     assert.end();
   }

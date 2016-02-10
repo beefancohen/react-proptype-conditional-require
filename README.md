@@ -46,23 +46,30 @@ Hello.propTypes = {
 };
 ```
 
-# usage
+# syntax
 
-This is a function that accepts a propType and a condition in which to enforce this propType for React components. The function uses the signature:
+This is a function that accepts a propType (a typeValidator function) and a condition in which to enforce this propType for React components. The function uses the signature:
 
 ```js
 import isRequiredIf from 'react-proptype-conditional-require';
 
-isRequiredIf(validator, conditional)
+...
+
+Component.propTypes = {
+  foo: isRequiredIf(typeValidator, conditional[, message])
+}
+
 ```
 
-## validator
+# usage
+
+## typeValidator
 A function that takes the arguments (props, propName, componentName) and returns an Error object if the validation fails. Do not `console.warn` or `throw`.
   - props - An object containing all of the props passed to the instance.
   - propName - The current key of the prop object under validation.
   - componentName - The class of the React component.
 
-**NOTE: All of the React built-in proptypes use this signature and you will usually use them to specify the validator**:
+**NOTE: All of the React built-in proptypes use this signature and you will usually use them to specify the typeValidator**:
 
 ```js
 import React, { PropTypes } from 'react';
@@ -81,7 +88,7 @@ Component.propTypes = {
 ```
 
 ## conditional
-A boolean *or* function that returns a truthy value that indicates whether the prop is required or not. The function follows the same signature as the validator function: (props, propName, componentName). It should return a boolean, but any truthy value will do.
+A boolean *or* function that returns a truthy value that indicates whether the prop is required or not. The function follows the same signature as the typeValidator function: (props, propName, componentName). It should return a boolean, but any truthy value will do.
 
 A common use case:
 
@@ -103,5 +110,28 @@ Component.propTypes = {
 
 In that case, the labelClassName will only be required if label is passed.
 
+## message (optional)
+A string that specifies the custom error message that you would like to provide if the prop is required but missing. If not provided, the error message used by React will be default.
+
+```js
+import React, { PropTypes } from 'react';
+import isRequiredIf from 'react-proptype-conditional-require';
+
+const { string } = PropTypes;
+
+...
+
+Component.LABEL_CLASSNAME_ERROR_MESSAGE = 'You must provide a labelClassName when passing down the label prop';
+
+Component.propTypes = {
+  label: string,
+  labelClassName: isRequiredIf(string, props => props.hasOwnProperty('label'), Component.LABEL_CLASSNAME_ERROR_MESSAGE);
+}
+
+...
+```
+
+The above code snippet would throw the custom error message if the label prop were passed but the labelClassName prop was not.
+
 # license
-MIT
+MIT License.

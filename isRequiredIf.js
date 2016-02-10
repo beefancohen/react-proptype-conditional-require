@@ -1,7 +1,12 @@
 'use strict';
 
-import { PropTypes } from 'react';
 
+const VALIDATOR_ARG_ERROR_MESSAGE =
+  'The typeValidator argument must be a function ' +
+  'with the signature function(props, propName, componentName).';
+
+const MESSAGE_ARG_ERROR_MESSAGE =
+  'The error message is optional, but must be a string if provided.';
 
 const propIsRequired = (condition, props, propName, componentName) => {
   if (typeof condition === 'boolean') {
@@ -15,43 +20,43 @@ const propIsRequired = (condition, props, propName, componentName) => {
   return false;
 };
 
-const isCustomReactPropType = validator =>
-    Object.keys(PropTypes).every(propType => PropTypes[propType] !== validator);
+const propExists = (props, propName) => props.hasOwnProperty(propName);
 
-const propExists = (props, propName, componentName) => {
-  if (!props.hasOwnProperty(propName) || !Boolean(props[propName])) {
-    return new Error(
-      `Warning: Failed propType: Required ${props[propName]} \`${propName}\`` +
-      ` was not specified in \`${componentName}\`.`
-    );
+const missingPropError = (props, propName, componentName, message) => {
+  if (Boolean(message)) {
+    return new Error(message);
   }
 
-  return true;
+  return new Error(
+    `Warning: Failed propType: Required ${props[propName]} \`${propName}\`` +
+    ` was not specified in \`${componentName}\`.`
+  );
 };
 
-const isRequiredIf = (validator, condition) => {
-  if (typeof validator !== 'function') {
-    throw new TypeError(
-      'The validator argument must be a function ' +
-      'with the signature function(props, propName, componentName).'
-    );
+const guardAgainstInvalidArgTypes = (typeValidator, message) => {
+  if (typeof typeValidator !== 'function') {
+    throw new TypeError(VALIDATOR_ARG_ERROR_MESSAGE);
   }
+
+  if (Boolean(message) && typeof message !== 'string') {
+    throw new TypeError(MESSAGE_ARG_ERROR_MESSAGE);
+  }
+};
+
+const isRequiredIf = (typeValidator, condition, message) => {
+  guardAgainstInvalidArgTypes(typeValidator, message);
 
   return (props, propName, componentName) => {
     if (propIsRequired(condition, props, propName, componentName)) {
-      if (isCustomReactPropType(validator)) {
-        const exists = propExists(props, propName, componentName);
-        if (exists instanceof Error) {
-          return exists;
-        }
-
-        return validator(props, propName, componentName);
+      if (propExists(props, propName)) {
+        return typeValidator(props, propName, componentName);
       }
-      return validator.isRequired(props, propName, componentName);
+
+      return missingPropError(props, propName, componentName, message);
     }
 
-    // Is not required, so just run validator.
-    return validator(props, propName, componentName);
+    // Is not required, so just run typeValidator.
+    return typeValidator(props, propName, componentName);
   };
 };
 
