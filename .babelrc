@@ -2,9 +2,12 @@
   "plugins": [
     "transform-object-rest-spread"
   ],
-
-  "presets": [
-    "react",
-    "es2015-rollup"
-  ]
+  "env": {
+    "development": {
+      "presets": [ "react", "es2015-rollup" ]
+    },
+    "test": {
+      "presets": [ "react", "es2015" ]
+    }
+  }
 }
