@@ -1,5 +1,5 @@
 import test from 'tape';
-import isRequiredIf from '../isRequiredIf';
+import isRequiredIf from '../../isRequiredIf';
 
 test('isRequiredIf sanity tests', nest => {
   nest.test(
@@ -155,7 +155,10 @@ test('Message argument sanity tests', nest => {
       const err =
         isRequiredIf(() => null, true, 'This is required.')(props, propName);
 
-      assert.ok(err instanceof Error);
+      assert.ok(
+        err instanceof Error,
+        'Returns an error because required prop is missing'
+      );
 
       const expectedMessage = 'This is required.';
       const actualMessage = err.message;

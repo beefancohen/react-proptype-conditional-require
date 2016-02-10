@@ -1,5 +1,5 @@
 import test from 'tape';
-import isRequiredIf from '../isRequiredIf';
+import isRequiredIf from '../../isRequiredIf';
 
 
 test('Truthy conditional tests', nest => {
@@ -50,7 +50,10 @@ test('Truthy conditional tests', nest => {
       const err =
         isRequiredIf(valid, props)(props, propName, componentName);
 
-      assert.ok(err instanceof Error);
+      assert.ok(
+        err instanceof Error,
+        'Returns an error because required prop is missing'
+      );
 
       assert.end();
     }
