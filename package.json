@@ -7,10 +7,8 @@
     "clean": "rimraf coverage .nyc_output npm-debug.log",
     "lint": "eslint --config .eslintrc test/isRequiredIf.js isRequiredIf.js",
     "test": "NODE_ENV=test nyc --require babel-core/register tap ./test/*-test.js",
-    "coverage": "npm test && nyc report --reporter=text-lcov | coveralls",
     "prebuild": "npm run clean && npm run lint && npm run test",
     "build": "rollup -c ./config/rollup.config.cjs.js",
-    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
