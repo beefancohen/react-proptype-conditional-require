@@ -1,13 +1,13 @@
 {
   "name": "react-proptype-conditional-require",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Conditionally require a React proptype based on other props and/or other conditions.",
   "main": "dist/react-proptype-conditional-require.js",
   "scripts": {
     "clean": "rimraf coverage .nyc_output npm-debug.log",
     "lint": "eslint --config .eslintrc test/*-test.js isRequiredIf.js",
-    "test": "NODE_ENV=test nyc --require babel-core/register tap ./test/*-test.js",
-    "test:quick": "NODE_ENV=test babel-tape-runner ./test/*-test.js | faucet",
+    "test": "NODE_ENV=test nyc --require babel-core/register tap ./test/**/*-test.js",
+    "test:quick": "NODE_ENV=test babel-tape-runner ./test/**/*-test.js | faucet",
     "prebuild": "npm run clean && npm run lint && npm run test:quick",
     "build": "rollup -c ./config/rollup.config.cjs.js",
     "prepublish": "npm run build"

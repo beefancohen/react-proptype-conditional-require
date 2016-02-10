@@ -4,114 +4,82 @@ import { PropTypes } from 'react';
 
 const { string } = PropTypes;
 
+test('Function conditional tests', nest => {
+  nest.test(
+    "...prop is not required and validates against custom typeValidator",
+    assert => {
+      const typeValidator = () => {
+        assert.pass('The typeValidator has been run.');
+        assert.end();
+      };
 
-test(
-  "Prop is determined to not be required based on function",
-  assert => {
-    const typeValidator = () => {
-      assert.pass('The typeValidator has been run.');
+      // will return false, so foo is not required.
+      const condition = props => props.hasOwnProperty('bar');
+
+      const props = {};
+      const propName = 'foo';
+      const componentName = 'FooComponent';
+
+      isRequiredIf(typeValidator, condition)(props, propName, componentName);
+    }
+  );
+
+  nest.test(
+    "...prop is not required and validates against React typeValidator",
+    assert => {
+      const props = {};
+      const propName = 'foo';
+      const componentName = 'FooComponent';
+
+      const valid =
+        isRequiredIf(string, () => false)(props, propName, componentName);
+
+      assert.equals(
+        valid,
+        null,
+        'The typeValidator returns null because it is not required.'
+      );
       assert.end();
-    };
+    }
+  );
 
-    // will return false, so foo is not required.
-    const condition = props => props.hasOwnProperty('bar');
+  nest.test(
+    "...prop is required and returns error because it is missing",
+    assert => {
+      const valid = () => assert.fail('The typeValidator has been run.');
 
-    const props = {};
-    const propName = 'foo';
-    const componentName = 'FooComponent';
+      // will return true, so foo is required.
+      const condition = props => props.hasOwnProperty('bar');
 
-    isRequiredIf(typeValidator, condition)(props, propName, componentName);
-  }
-);
+      const props = { bar: 'x' };
+      const propName = 'foo';
+      const componentName = 'FooComponent';
 
-test(
-  "Prop is required based on function but returns error because it is missing",
-  assert => {
-    const valid = () => assert.fail('The typeValidator has been run.');
+      const err =
+        isRequiredIf(valid, condition)(props, propName, componentName);
 
-    // will return true, so foo is required.
-    const condition = props => props.hasOwnProperty('bar');
+      assert.ok(err instanceof Error);
 
-    const props = { bar: 'x' };
-    const propName = 'foo';
-    const componentName = 'FooComponent';
-
-    assert.throws(
-      () => {
-        throw isRequiredIf(valid, condition)(props, propName, componentName);
-      }
-    );
-
-    assert.end();
-  }
-);
-
-test(
-  "Prop is required based on function and validates against typeValidator",
-  assert => {
-    const typeValidator = () => {
-      assert.pass('The typeValidator is run.');
       assert.end();
-    };
+    }
+  );
 
-    // will return true, so foo is required.
-    const condition = props => props.hasOwnProperty('bar');
+  nest.test(
+    "...prop is required and present, so it validates against typeValidator",
+    assert => {
+      const typeValidator = () => {
+        assert.pass('The typeValidator is run.');
+        assert.end();
+      };
 
-    const props = { bar: 'x', foo: 'y' };
-    const propName = 'foo';
-    const componentName = 'FooComponent';
+      // will return true, so foo is required.
+      const condition = props => props.hasOwnProperty('bar');
 
-    isRequiredIf(typeValidator, condition)(props, propName, componentName);
-  }
-);
+      const props = { bar: 'x', foo: 'y' };
+      const propName = 'foo';
+      const componentName = 'FooComponent';
 
-test(
-  "Prop is not required, so it validates against React built-in typeValidator",
-  assert => {
-    const props = {};
-    const propName = 'foo';
-    const componentName = 'FooComponent';
-
-    const valid =
-      isRequiredIf(string, () => false)(props, propName, componentName);
-
-    assert.equals(
-      valid,
-      null,
-      'The typeValidator returns null because it is not required.'
-    );
-    assert.end();
-  }
-);
-
-test(
-  "Prop is required and missing, so React built-in typeValidator returns error",
-  assert => {
-    const props = {};
-    const propName = 'foo';
-    const componentName = 'FooComponent';
-
-    assert.throws(
-      () => {
-        throw isRequiredIf(string, () => true)(props, propName, componentName);
-      }
-    );
-
-    assert.end();
-  }
-);
-
-test(
-  "Prop is required and present, so React built-in typeValidator returns null",
-  assert => {
-    const props = { foo: 'abc' };
-    const propName = 'foo';
-    const componentName = 'FooComponent';
-
-    const valid =
-      isRequiredIf(string, () => true)(props, propName, componentName);
-
-    assert.equals(valid, null, 'The typeValidator returns null.');
-    assert.end();
-  }
-);
+      isRequiredIf(typeValidator, condition)(props, propName, componentName);
+    }
+  );
+});
