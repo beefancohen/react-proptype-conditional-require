@@ -28,7 +28,7 @@ const missingPropError = (props, propName, componentName, message) => {
   }
 
   return new Error(
-    `Warning: Failed propType: Required ${props[propName]} \`${propName}\`` +
+    `Required ${props[propName]} \`${propName}\`` +
     ` was not specified in \`${componentName}\`.`
   );
 };
