@@ -46,17 +46,17 @@ const guardAgainstInvalidArgTypes = (typeValidator, message) => {
 const isRequiredIf = (typeValidator, condition, message) => {
   guardAgainstInvalidArgTypes(typeValidator, message);
 
-  return (props, propName, componentName) => {
+  return (props, propName, componentName, ...rest) => {
     if (propIsRequired(condition, props, propName, componentName)) {
       if (propExists(props, propName)) {
-        return typeValidator(props, propName, componentName);
+        return typeValidator(props, propName, componentName, ...rest);
       }
 
       return missingPropError(props, propName, componentName, message);
     }
 
     // Is not required, so just run typeValidator.
-    return typeValidator(props, propName, componentName);
+    return typeValidator(props, propName, componentName, ...rest);
   };
 };
 
