@@ -1,15 +1,14 @@
-import test from 'tape';
+/* eslint-env mocha */
+import assert from 'assert';
 import isRequiredIf from '../../isRequiredIf';
 
-
-test('Truthy conditional tests', nest => {
-  nest.test(
-    "...when condition is null, " +
-    "prop is not required and validates against typeValidator",
-    assert => {
+describe('Truthy conditional tests', () => {
+  it(
+    '...when condition is null, ' +
+    'prop is not required and validates against typeValidator',
+    () => {
       const typeValidator = () => {
-        assert.pass('The typeValidator has been run.');
-        assert.end();
+        assert('The typeValidator has been run.');
       };
 
       const props = { bar: 'x' };
@@ -17,16 +16,15 @@ test('Truthy conditional tests', nest => {
       const componentName = 'FooComponent';
 
       isRequiredIf(typeValidator, null)(props, propName, componentName);
-    }
+    },
   );
 
-  nest.test(
-    "...when condition is undefined, " +
-    "prop is not required and validates against typeValidator",
-    assert => {
+  it(
+    '...when condition is undefined, ' +
+    'prop is not required and validates against typeValidator',
+    () => {
       const typeValidator = () => {
-        assert.pass('The typeValidator has been run.');
-        assert.end();
+        assert('The typeValidator has been run.');
       };
 
       const props = { bar: 'x' };
@@ -34,13 +32,13 @@ test('Truthy conditional tests', nest => {
       const componentName = 'FooComponent';
 
       isRequiredIf(typeValidator, undefined)(props, propName, componentName);
-    }
+    },
   );
 
-  nest.test(
-    "...when condition is truthy, " +
-    "prop is required and returns error because it is missing",
-    assert => {
+  it(
+    '...when condition is truthy, ' +
+    'prop is required and returns error because it is missing',
+    () => {
       const valid = () => assert.fail('The typeValidator has been run.');
 
       const props = { bar: 'x' };
@@ -50,22 +48,19 @@ test('Truthy conditional tests', nest => {
       const err =
         isRequiredIf(valid, props)(props, propName, componentName);
 
-      assert.ok(
+      assert(
         err instanceof Error,
-        'Returns an error because required prop is missing'
+        'Returns an error because required prop is missing',
       );
-
-      assert.end();
-    }
+    },
   );
 
-  nest.test(
-    "...when condition is truthy, " +
-    "prop is required and present, so it validates against typeValidator",
-    assert => {
+  it(
+    '...when condition is truthy, ' +
+    'prop is required and present, so it validates against typeValidator',
+    () => {
       const typeValidator = () => {
-        assert.pass('The typeValidator has been run.');
-        assert.end();
+        assert('The typeValidator has been run.');
       };
 
       const props = { foo: 'abc' };
@@ -73,7 +68,6 @@ test('Truthy conditional tests', nest => {
       const componentName = 'FooComponent';
 
       isRequiredIf(typeValidator, props)(props, propName, componentName);
-    }
+    },
   );
 });
-

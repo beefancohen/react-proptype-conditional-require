@@ -1,6 +1,3 @@
-'use strict';
-
-
 const VALIDATOR_ARG_ERROR_MESSAGE =
   'The typeValidator argument must be a function ' +
   'with the signature function(props, propName, componentName).';
@@ -20,16 +17,16 @@ const propIsRequired = (condition, props, propName, componentName) => {
   return false;
 };
 
-const propExists = (props, propName) => props.hasOwnProperty(propName);
+const propExists = (props, propName) => Object.hasOwnProperty.call(props, propName);
 
 const missingPropError = (props, propName, componentName, message) => {
-  if (Boolean(message)) {
+  if (message) {
     return new Error(message);
   }
 
   return new Error(
     `Required ${props[propName]} \`${propName}\`` +
-    ` was not specified in \`${componentName}\`.`
+    ` was not specified in \`${componentName}\`.`,
   );
 };
 
