@@ -1,32 +1,32 @@
-import test from 'tape';
-import isRequiredIf from '../../isRequiredIf';
+/* eslint-env mocha */
+import assert from 'assert';
 import { PropTypes } from 'react';
+import isRequiredIf from '../../isRequiredIf';
 
 const { string } = PropTypes;
 
-test('Function conditional tests', nest => {
-  nest.test(
-    "...prop is not required and validates against custom typeValidator",
-    assert => {
+describe('Function conditional tests', () => {
+  it(
+    '...prop is not required and validates against custom typeValidator',
+    () => {
       const typeValidator = () => {
-        assert.pass('The typeValidator has been run.');
-        assert.end();
+        assert('The typeValidator has been run.');
       };
 
       // will return false, so foo is not required.
-      const condition = props => props.hasOwnProperty('bar');
+      const condition = props => Object.hasOwnProperty.call(props, 'bar');
 
       const props = {};
       const propName = 'foo';
       const componentName = 'FooComponent';
 
       isRequiredIf(typeValidator, condition)(props, propName, componentName);
-    }
+    },
   );
 
-  nest.test(
-    "...prop is not required and validates against React typeValidator",
-    assert => {
+  it(
+    '...prop is not required and validates against React typeValidator',
+    () => {
       const props = {};
       const propName = 'foo';
       const componentName = 'FooComponent';
@@ -34,22 +34,21 @@ test('Function conditional tests', nest => {
       const valid =
         isRequiredIf(string, () => false)(props, propName, componentName);
 
-      assert.equals(
+      assert.equal(
         valid,
         null,
-        'The typeValidator returns null because it is not required.'
+        'The typeValidator returns null because it is not required.',
       );
-      assert.end();
-    }
+    },
   );
 
-  nest.test(
-    "...prop is required and returns error because it is missing",
-    assert => {
+  it(
+    '...prop is required and returns error because it is missing',
+    () => {
       const valid = () => assert.fail('The typeValidator has been run.');
 
       // will return true, so foo is required.
-      const condition = props => props.hasOwnProperty('bar');
+      const condition = props => Object.hasOwnProperty.call(props, 'bar');
 
       const props = { bar: 'x' };
       const propName = 'foo';
@@ -58,31 +57,28 @@ test('Function conditional tests', nest => {
       const err =
         isRequiredIf(valid, condition)(props, propName, componentName);
 
-      assert.ok(
+      assert(
         err instanceof Error,
-        'Returns an error because required prop is missing'
+        'Returns an error because required prop is missing',
       );
-
-      assert.end();
-    }
+    },
   );
 
-  nest.test(
-    "...prop is required and present, so it validates against typeValidator",
-    assert => {
+  it(
+    '...prop is required and present, so it validates against typeValidator',
+    () => {
       const typeValidator = () => {
-        assert.pass('The typeValidator is run.');
-        assert.end();
+        assert('The typeValidator is run.');
       };
 
       // will return true, so foo is required.
-      const condition = props => props.hasOwnProperty('bar');
+      const condition = props => Object.hasOwnProperty.call(props, 'bar');
 
       const props = { bar: 'x', foo: 'y' };
       const propName = 'foo';
       const componentName = 'FooComponent';
 
       isRequiredIf(typeValidator, condition)(props, propName, componentName);
-    }
+    },
   );
 });
