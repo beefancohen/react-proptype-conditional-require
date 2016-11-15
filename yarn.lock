@@ -71,9 +71,27 @@ ansicolors@~0.2.1:
   version "0.2.1"
   resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/ansicolors/-/ansicolors-0.2.1.tgz#be089599097b74a5c9c4a84a0cdbcdb62bd87aef"
 
+anymatch@^1.3.0:
+  version "1.3.0"
+  resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/anymatch/-/anymatch-1.3.0.tgz#a3e52fa39168c825ff57b0248126ce5a8ff95507"
+  dependencies:
+    arrify "^1.0.0"
+    micromatch "^2.1.5"
+
 append-transform@^0.3.0:
   version "0.3.0"
   resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/append-transform/-/append-transform-0.3.0.tgz#d6933ce4a85f09445d9ccc4cc119051b7381a813"
+
+aproba@^1.0.3:
+  version "1.0.4"
+  resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/aproba/-/aproba-1.0.4.tgz#2713680775e7614c8ba186c065d4e2e52d1072c0"
+
+are-we-there-yet@~1.1.2:
+  version "1.1.2"
+  resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/are-we-there-yet/-/are-we-there-yet-1.1.2.tgz#80e470e95a084794fe1899262c5667c6e88de1b3"
+  dependencies:
+    delegates "^1.0.0"
+    readable-stream "^2.0.0 || ^1.1.13"
 
 argparse@^1.0.7:
   version "1.0.9"
@@ -90,10 +108,6 @@ arr-diff@^2.0.0:
 arr-flatten@^1.0.1:
   version "1.0.1"
   resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/arr-flatten/-/arr-flatten-1.0.1.tgz#e5ffe54d45e19f32f216e91eb99c8ce892bb604b"
-
-arr-union@^3.1.0:
-  version "3.1.0"
-  resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/arr-union/-/arr-union-3.1.0.tgz#e39b09aea9def866a8f206e288af63919bae39c4"
 
 array-differ@^1.0.0:
   version "1.0.0"
@@ -137,9 +151,9 @@ assert-plus@^1.0.0:
   version "1.0.0"
   resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/assert-plus/-/assert-plus-1.0.0.tgz#f12e0f3c5d77b0b1cdd9146942e4e96c1e4dd525"
 
-async-array-reduce@^0.2.0:
-  version "0.2.0"
-  resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/async-array-reduce/-/async-array-reduce-0.2.0.tgz#743d91238cf71e79e6d59e86ad080f6c437a5bd6"
+async-each@^1.0.0:
+  version "1.0.1"
+  resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/async-each/-/async-each-1.0.1.tgz#19d386a1d9edc6e7c1c85d388aedbcc56d33602d"
 
 async@^1.4.0, async@^1.4.2, async@1.x:
   version "1.5.2"
@@ -161,6 +175,27 @@ aws4@^1.2.1:
   version "1.5.0"
   resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/aws4/-/aws4-1.5.0.tgz#0a29ffb79c31c9e712eeb087e8e7a64b4a56d755"
 
+babel-cli@^6.5.1:
+  version "6.18.0"
+  resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/babel-cli/-/babel-cli-6.18.0.tgz#92117f341add9dead90f6fa7d0a97c0cc08ec186"
+  dependencies:
+    babel-core "^6.18.0"
+    babel-polyfill "^6.16.0"
+    babel-register "^6.18.0"
+    babel-runtime "^6.9.0"
+    commander "^2.8.1"
+    convert-source-map "^1.1.0"
+    fs-readdir-recursive "^1.0.0"
+    glob "^5.0.5"
+    lodash "^4.2.0"
+    output-file-sync "^1.1.0"
+    path-is-absolute "^1.0.0"
+    slash "^1.0.0"
+    source-map "^0.5.0"
+    v8flags "^2.0.10"
+  optionalDependencies:
+    chokidar "^1.0.0"
+
 babel-code-frame@^6.16.0:
   version "6.16.0"
   resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/babel-code-frame/-/babel-code-frame-6.16.0.tgz#f90e60da0862909d3ce098733b5d3987c97cb8de"
@@ -169,7 +204,7 @@ babel-code-frame@^6.16.0:
     esutils "^2.0.2"
     js-tokens "^2.0.0"
 
-babel-core@^6.0.0, babel-core@^6.18.0, babel-core@^6.5.1, babel-core@6:
+babel-core@^6.0.0, babel-core@^6.18.0:
   version "6.18.2"
   resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/babel-core/-/babel-core-6.18.2.tgz#d8bb14dd6986fa4f3566a26ceda3964fa0e04e5b"
   dependencies:
@@ -232,6 +267,10 @@ babel-helper-define-map@^6.18.0, babel-helper-define-map@^6.8.0:
     babel-types "^6.18.0"
     lodash "^4.2.0"
 
+babel-helper-flip-expressions@^0.0.1:
+  version "0.0.1"
+  resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/babel-helper-flip-expressions/-/babel-helper-flip-expressions-0.0.1.tgz#c2ba1599426e7928333fd5c08eee6cdf8328c848"
+
 babel-helper-function-name@^6.18.0, babel-helper-function-name@^6.8.0:
   version "6.18.0"
   resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/babel-helper-function-name/-/babel-helper-function-name-6.18.0.tgz#68ec71aeba1f3e28b2a6f0730190b754a9bf30e6"
@@ -256,6 +295,14 @@ babel-helper-hoist-variables@^6.18.0:
     babel-runtime "^6.0.0"
     babel-types "^6.18.0"
 
+babel-helper-is-nodes-equiv@^0.0.1:
+  version "0.0.1"
+  resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/babel-helper-is-nodes-equiv/-/babel-helper-is-nodes-equiv-0.0.1.tgz#34e9b300b1479ddd98ec77ea0bbe9342dfe39684"
+
+babel-helper-is-void-0@^0.0.1:
+  version "0.0.1"
+  resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/babel-helper-is-void-0/-/babel-helper-is-void-0-0.0.1.tgz#ed74553b883e68226ae45f989a99b02c190f105a"
+
 babel-helper-optimise-call-expression@^6.18.0:
   version "6.18.0"
   resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/babel-helper-optimise-call-expression/-/babel-helper-optimise-call-expression-6.18.0.tgz#9261d0299ee1a4f08a6dd28b7b7c777348fd8f0f"
@@ -271,6 +318,10 @@ babel-helper-regex@^6.8.0:
     babel-types "^6.18.0"
     lodash "^4.2.0"
 
+babel-helper-remove-or-void@^0.0.1:
+  version "0.0.1"
+  resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/babel-helper-remove-or-void/-/babel-helper-remove-or-void-0.0.1.tgz#f602790e465acf2dfbe84fb3dd210c43a2dd7262"
+
 babel-helper-replace-supers@^6.18.0, babel-helper-replace-supers@^6.8.0:
   version "6.18.0"
   resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/babel-helper-replace-supers/-/babel-helper-replace-supers-6.18.0.tgz#28ec69877be4144dbd64f4cc3a337e89f29a924e"
@@ -281,6 +332,10 @@ babel-helper-replace-supers@^6.18.0, babel-helper-replace-supers@^6.8.0:
     babel-template "^6.16.0"
     babel-traverse "^6.18.0"
     babel-types "^6.18.0"
+
+babel-helper-to-multiple-sequence-expressions@^0.0.2:
+  version "0.0.2"
+  resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/babel-helper-to-multiple-sequence-expressions/-/babel-helper-to-multiple-sequence-expressions-0.0.2.tgz#07d5d2e674aa62962ac9e0000b539920c301c4b9"
 
 babel-helpers@^6.16.0:
   version "6.16.0"
@@ -309,12 +364,6 @@ babel-plugin-check-es2015-constants@^6.3.13:
   dependencies:
     babel-runtime "^6.0.0"
 
-babel-plugin-external-helpers@^6.4.0:
-  version "6.18.0"
-  resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/babel-plugin-external-helpers/-/babel-plugin-external-helpers-6.18.0.tgz#c6bbf87a4448eb49616f24a8b8088503863488da"
-  dependencies:
-    babel-runtime "^6.0.0"
-
 babel-plugin-istanbul@^2.0.0:
   version "2.0.3"
   resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/babel-plugin-istanbul/-/babel-plugin-istanbul-2.0.3.tgz#266b304b9109607d60748474394676982f660df4"
@@ -328,6 +377,59 @@ babel-plugin-jest-hoist@^17.0.2:
   version "17.0.2"
   resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/babel-plugin-jest-hoist/-/babel-plugin-jest-hoist-17.0.2.tgz#213488ce825990acd4c30f887dca09fffeb45235"
 
+babel-plugin-minify-constant-folding@^0.0.1:
+  version "0.0.1"
+  resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/babel-plugin-minify-constant-folding/-/babel-plugin-minify-constant-folding-0.0.1.tgz#d4abb5b62ccfc094bdce2a318b2f94fda5a73e29"
+
+babel-plugin-minify-dead-code-elimination@^0.1.0:
+  version "0.1.0"
+  resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/babel-plugin-minify-dead-code-elimination/-/babel-plugin-minify-dead-code-elimination-0.1.0.tgz#caa8b81b944feea5ee8a9a6870bf307dc8352f14"
+  dependencies:
+    babel-helper-remove-or-void "^0.0.1"
+    lodash.some "^4.6.0"
+
+babel-plugin-minify-flip-comparisons@^0.0.1:
+  version "0.0.1"
+  resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/babel-plugin-minify-flip-comparisons/-/babel-plugin-minify-flip-comparisons-0.0.1.tgz#679f4493a692afc705c4b79fde1dadb535c4eb08"
+  dependencies:
+    babel-helper-is-void-0 "^0.0.1"
+
+babel-plugin-minify-guarded-expressions@^0.0.3:
+  version "0.0.3"
+  resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/babel-plugin-minify-guarded-expressions/-/babel-plugin-minify-guarded-expressions-0.0.3.tgz#6da1caa0b6abda964647377bd5e19afdbf91cae8"
+  dependencies:
+    babel-helper-flip-expressions "^0.0.1"
+
+babel-plugin-minify-infinity@^0.0.1:
+  version "0.0.1"
+  resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/babel-plugin-minify-infinity/-/babel-plugin-minify-infinity-0.0.1.tgz#9394a4defc9db56da76f13fedd5d5e2d486a4299"
+
+babel-plugin-minify-mangle-names@^0.0.4:
+  version "0.0.4"
+  resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/babel-plugin-minify-mangle-names/-/babel-plugin-minify-mangle-names-0.0.4.tgz#94812c0c82320f7af97511b7d598527933973197"
+
+babel-plugin-minify-numeric-literals@^0.0.1:
+  version "0.0.1"
+  resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/babel-plugin-minify-numeric-literals/-/babel-plugin-minify-numeric-literals-0.0.1.tgz#9597e6c31154d7daf3744d0bd417c144b275bd53"
+
+babel-plugin-minify-replace@^0.0.1:
+  version "0.0.1"
+  resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/babel-plugin-minify-replace/-/babel-plugin-minify-replace-0.0.1.tgz#5d5aea7cb9899245248d1ee9ce7a2fe556a8facc"
+
+babel-plugin-minify-simplify@^0.0.4:
+  version "0.0.4"
+  resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/babel-plugin-minify-simplify/-/babel-plugin-minify-simplify-0.0.4.tgz#940d0dd0db6d4c4c1c51fc34c3c6e0d0ee1d67e9"
+  dependencies:
+    babel-helper-flip-expressions "^0.0.1"
+    babel-helper-is-nodes-equiv "^0.0.1"
+    babel-helper-to-multiple-sequence-expressions "^0.0.2"
+
+babel-plugin-minify-type-constructors@^0.0.2:
+  version "0.0.2"
+  resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/babel-plugin-minify-type-constructors/-/babel-plugin-minify-type-constructors-0.0.2.tgz#4f9a28951e776f31ac11a29cd58cf9eef8b2e292"
+  dependencies:
+    babel-helper-is-void-0 "^0.0.1"
+
 babel-plugin-syntax-flow@^6.18.0, babel-plugin-syntax-flow@^6.3.13:
   version "6.18.0"
   resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/babel-plugin-syntax-flow/-/babel-plugin-syntax-flow-6.18.0.tgz#4c3ab20a2af26aa20cd25995c398c4eb70310c8d"
@@ -335,10 +437,6 @@ babel-plugin-syntax-flow@^6.18.0, babel-plugin-syntax-flow@^6.3.13:
 babel-plugin-syntax-jsx@^6.3.13, babel-plugin-syntax-jsx@^6.8.0:
   version "6.18.0"
   resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/babel-plugin-syntax-jsx/-/babel-plugin-syntax-jsx-6.18.0.tgz#0af32a9a6e13ca7a3fd5069e62d7b0f58d0d8946"
-
-babel-plugin-syntax-object-rest-spread@^6.3.13, babel-plugin-syntax-object-rest-spread@^6.8.0:
-  version "6.13.0"
-  resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/babel-plugin-syntax-object-rest-spread/-/babel-plugin-syntax-object-rest-spread-6.13.0.tgz#fd6536f2bce13836ffa3a5458c4903a597bb3bf5"
 
 babel-plugin-transform-es2015-arrow-functions@^6.3.13:
   version "6.8.0"
@@ -362,7 +460,7 @@ babel-plugin-transform-es2015-block-scoping@^6.18.0:
     babel-types "^6.18.0"
     lodash "^4.2.0"
 
-babel-plugin-transform-es2015-classes@^6.18.0, babel-plugin-transform-es2015-classes@^6.9.0:
+babel-plugin-transform-es2015-classes@^6.18.0:
   version "6.18.0"
   resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/babel-plugin-transform-es2015-classes/-/babel-plugin-transform-es2015-classes-6.18.0.tgz#ffe7a17321bf83e494dcda0ae3fc72df48ffd1d9"
   dependencies:
@@ -516,11 +614,28 @@ babel-plugin-transform-flow-strip-types@^6.3.13:
     babel-plugin-syntax-flow "^6.18.0"
     babel-runtime "^6.0.0"
 
-babel-plugin-transform-object-rest-spread@^6.3.13:
-  version "6.16.0"
-  resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/babel-plugin-transform-object-rest-spread/-/babel-plugin-transform-object-rest-spread-6.16.0.tgz#db441d56fffc1999052fdebe2e2f25ebd28e36a9"
+babel-plugin-transform-member-expression-literals@^6.8.0:
+  version "6.8.0"
+  resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/babel-plugin-transform-member-expression-literals/-/babel-plugin-transform-member-expression-literals-6.8.0.tgz#718755a70492a895d8f41810afa9998bc09f57b9"
   dependencies:
-    babel-plugin-syntax-object-rest-spread "^6.8.0"
+    babel-runtime "^6.0.0"
+
+babel-plugin-transform-merge-sibling-variables@^6.8.0:
+  version "6.8.0"
+  resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/babel-plugin-transform-merge-sibling-variables/-/babel-plugin-transform-merge-sibling-variables-6.8.0.tgz#724074e4ef78b601fcf9a34165c972a1b6117e99"
+  dependencies:
+    babel-runtime "^6.0.0"
+
+babel-plugin-transform-minify-booleans@^6.8.0:
+  version "6.8.0"
+  resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/babel-plugin-transform-minify-booleans/-/babel-plugin-transform-minify-booleans-6.8.0.tgz#b1a48864a727847696b84eae36fa4d085a54b42b"
+  dependencies:
+    babel-runtime "^6.0.0"
+
+babel-plugin-transform-property-literals@^6.8.0:
+  version "6.8.0"
+  resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/babel-plugin-transform-property-literals/-/babel-plugin-transform-property-literals-6.8.0.tgz#a65b2e6e1274d25df0f3a4c5e85bc8f1cdd9e019"
+  dependencies:
     babel-runtime "^6.0.0"
 
 babel-plugin-transform-react-display-name@^6.3.13:
@@ -559,6 +674,16 @@ babel-plugin-transform-regenerator@^6.16.0:
     babel-types "^6.16.0"
     private "~0.1.5"
 
+babel-plugin-transform-regexp-constructors@^0.0.1:
+  version "0.0.1"
+  resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/babel-plugin-transform-regexp-constructors/-/babel-plugin-transform-regexp-constructors-0.0.1.tgz#c5878cc4d78437e99d02790d325f163741741ff5"
+
+babel-plugin-transform-simplify-comparison-operators@^6.8.0:
+  version "6.8.0"
+  resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/babel-plugin-transform-simplify-comparison-operators/-/babel-plugin-transform-simplify-comparison-operators-6.8.0.tgz#0183d65bfdc54c80d922a3a9b3008e25fa9d32a7"
+  dependencies:
+    babel-runtime "^6.0.0"
+
 babel-plugin-transform-strict-mode@^6.18.0:
   version "6.18.0"
   resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/babel-plugin-transform-strict-mode/-/babel-plugin-transform-strict-mode-6.18.0.tgz#df7cf2991fe046f44163dcd110d5ca43bc652b9d"
@@ -566,15 +691,43 @@ babel-plugin-transform-strict-mode@^6.18.0:
     babel-runtime "^6.0.0"
     babel-types "^6.18.0"
 
-babel-preset-es2015-rollup@^1.1.1:
-  version "1.2.0"
-  resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/babel-preset-es2015-rollup/-/babel-preset-es2015-rollup-1.2.0.tgz#feedf80346e01fa22d4de15e72cde1cefc59bf67"
+babel-plugin-transform-undefined-to-void@^6.8.0:
+  version "6.8.0"
+  resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/babel-plugin-transform-undefined-to-void/-/babel-plugin-transform-undefined-to-void-6.8.0.tgz#bc5b6b4908d3b1262170e67cb3963903ddce167e"
   dependencies:
-    babel-plugin-external-helpers "^6.4.0"
-    babel-preset-es2015 "^6.3.13"
-    modify-babel-preset "^2.1.1"
+    babel-runtime "^6.0.0"
 
-babel-preset-es2015@^6.3.13, babel-preset-es2015@^6.5.0:
+babel-polyfill@^6.16.0:
+  version "6.16.0"
+  resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/babel-polyfill/-/babel-polyfill-6.16.0.tgz#2d45021df87e26a374b6d4d1a9c65964d17f2422"
+  dependencies:
+    babel-runtime "^6.9.1"
+    core-js "^2.4.0"
+    regenerator-runtime "^0.9.5"
+
+babel-preset-babili:
+  version "0.0.8"
+  resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/babel-preset-babili/-/babel-preset-babili-0.0.8.tgz#aeba08a21171166e448fd4226c3cf03bcf682122"
+  dependencies:
+    babel-plugin-minify-constant-folding "^0.0.1"
+    babel-plugin-minify-dead-code-elimination "^0.1.0"
+    babel-plugin-minify-flip-comparisons "^0.0.1"
+    babel-plugin-minify-guarded-expressions "^0.0.3"
+    babel-plugin-minify-infinity "^0.0.1"
+    babel-plugin-minify-mangle-names "^0.0.4"
+    babel-plugin-minify-numeric-literals "^0.0.1"
+    babel-plugin-minify-replace "^0.0.1"
+    babel-plugin-minify-simplify "^0.0.4"
+    babel-plugin-minify-type-constructors "^0.0.2"
+    babel-plugin-transform-member-expression-literals "^6.8.0"
+    babel-plugin-transform-merge-sibling-variables "^6.8.0"
+    babel-plugin-transform-minify-booleans "^6.8.0"
+    babel-plugin-transform-property-literals "^6.8.0"
+    babel-plugin-transform-regexp-constructors "^0.0.1"
+    babel-plugin-transform-simplify-comparison-operators "^6.8.0"
+    babel-plugin-transform-undefined-to-void "^6.8.0"
+
+babel-preset-es2015@^6.18.0:
   version "6.18.0"
   resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/babel-preset-es2015/-/babel-preset-es2015-6.18.0.tgz#b8c70df84ec948c43dcf2bf770e988eb7da88312"
   dependencies:
@@ -687,6 +840,16 @@ bcrypt-pbkdf@^1.0.0:
   dependencies:
     tweetnacl "^0.14.3"
 
+binary-extensions@^1.0.0:
+  version "1.7.0"
+  resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/binary-extensions/-/binary-extensions-1.7.0.tgz#6c1610db163abfb34edfe42fa423343a1e01185d"
+
+block-stream@*:
+  version "0.0.9"
+  resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/block-stream/-/block-stream-0.0.9.tgz#13ebfe778a03205cfe03751481ebb4b3300c126a"
+  dependencies:
+    inherits "~2.0.0"
+
 boom@2.x.x:
   version "2.10.1"
   resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/boom/-/boom-2.10.1.tgz#39c8918ceff5799f83f9492a848f625add0c766f"
@@ -719,6 +882,10 @@ bser@^1.0.2:
   resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/bser/-/bser-1.0.2.tgz#381116970b2a6deea5646dd15dd7278444b56169"
   dependencies:
     node-int64 "^0.4.0"
+
+buffer-shims@^1.0.0:
+  version "1.0.0"
+  resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/buffer-shims/-/buffer-shims-1.0.0.tgz#9978ce317388c649ad8793028c3477ef044a8b51"
 
 builtin-modules@^1.0.0, builtin-modules@^1.1.1:
   version "1.1.1"
@@ -773,6 +940,21 @@ chalk@^1.0.0, chalk@^1.1.0, chalk@^1.1.1, chalk@^1.1.3:
     has-ansi "^2.0.0"
     strip-ansi "^3.0.0"
     supports-color "^2.0.0"
+
+chokidar@^1.0.0:
+  version "1.6.1"
+  resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/chokidar/-/chokidar-1.6.1.tgz#2f4447ab5e96e50fb3d789fd90d4c72e0e4c70c2"
+  dependencies:
+    anymatch "^1.3.0"
+    async-each "^1.0.0"
+    glob-parent "^2.0.0"
+    inherits "^2.0.1"
+    is-binary-path "^1.0.0"
+    is-glob "^2.0.0"
+    path-is-absolute "^1.0.0"
+    readdirp "^2.0.0"
+  optionalDependencies:
+    fsevents "^1.0.0"
 
 ci-info@^1.0.0:
   version "1.0.0"
@@ -843,7 +1025,7 @@ combined-stream@^1.0.5, combined-stream@~1.0.5:
   dependencies:
     delayed-stream "~1.0.0"
 
-commander@^2.9.0:
+commander@^2.8.1, commander@^2.9.0:
   version "2.9.0"
   resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/commander/-/commander-2.9.0.tgz#9c99094176e12240cb22d6c5146098400fe0f7d4"
   dependencies:
@@ -860,6 +1042,10 @@ concat-stream@^1.4.6:
     inherits "~2.0.1"
     readable-stream "~2.0.0"
     typedarray "~0.0.5"
+
+console-control-strings@^1.0.0, console-control-strings@~1.1.0:
+  version "1.1.0"
+  resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/console-control-strings/-/console-control-strings-1.1.0.tgz#3d7cf4464db6446ea644bf4b39507f9851008e8e"
 
 contains-path@^0.1.0:
   version "0.1.0"
@@ -923,7 +1109,7 @@ debug@^2.1.1, debug@^2.2.0:
   dependencies:
     ms "0.7.2"
 
-debug@2.2.0:
+debug@~2.2.0, debug@2.2.0:
   version "2.2.0"
   resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/debug/-/debug-2.2.0.tgz#f87057e995b1a1f6ae6a4960664137bc56f039da"
   dependencies:
@@ -932,6 +1118,10 @@ debug@2.2.0:
 decamelize@^1.0.0, decamelize@^1.1.1:
   version "1.2.0"
   resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/decamelize/-/decamelize-1.2.0.tgz#f6534d15148269b20352e7bee26f501f9a191290"
+
+deep-extend@~0.4.0:
+  version "0.4.1"
+  resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/deep-extend/-/deep-extend-0.4.1.tgz#efe4113d08085f4e6f9687759810f807469e2253"
 
 deep-is@~0.1.3:
   version "0.1.3"
@@ -952,6 +1142,10 @@ del@^2.0.2:
 delayed-stream@~1.0.0:
   version "1.0.0"
   resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/delayed-stream/-/delayed-stream-1.0.0.tgz#df3ae199acadfb7d440aaae0b29e2272b24ec619"
+
+delegates@^1.0.0:
+  version "1.0.0"
+  resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/delegates/-/delegates-1.0.0.tgz#84c6e159b81904fdca59a0ef44cd870d31250f9a"
 
 detect-indent@^4.0.0:
   version "4.0.0"
@@ -1198,10 +1392,6 @@ estraverse@~4.1.0:
   version "4.1.1"
   resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/estraverse/-/estraverse-4.1.1.tgz#f6caca728933a850ef90661d0e17982ba47111a2"
 
-estree-walker@^0.2.1:
-  version "0.2.1"
-  resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/estree-walker/-/estree-walker-0.2.1.tgz#bdafe8095383d8414d5dc2ecf4c9173b6db9412e"
-
 esutils@^2.0.0, esutils@^2.0.2:
   version "2.0.2"
   resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/esutils/-/esutils-2.0.2.tgz#0abf4f1caa5bcb1f7a9d8acc6dea4faaa04bac9b"
@@ -1234,18 +1424,6 @@ expand-range@^1.8.1:
   resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/expand-range/-/expand-range-1.8.2.tgz#a299effd335fe2721ebae8e257ec79644fc85337"
   dependencies:
     fill-range "^2.1.0"
-
-expand-tilde@^1.2.2:
-  version "1.2.2"
-  resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/expand-tilde/-/expand-tilde-1.2.2.tgz#0b81eba897e5a3d31d1c3d102f8f01441e559449"
-  dependencies:
-    os-homedir "^1.0.1"
-
-extend-shallow@^2.0.1:
-  version "2.0.1"
-  resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/extend-shallow/-/extend-shallow-2.0.1.tgz#51af7d614ad9a9f610ea1bafbb989d6b1c56890f"
-  dependencies:
-    is-extendable "^0.1.0"
 
 extend@~3.0.0:
   version "3.0.0"
@@ -1361,17 +1539,55 @@ formatio@1.1.1:
   dependencies:
     samsam "~1.1"
 
-fs-exists-sync@^0.1.0:
-  version "0.1.0"
-  resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/fs-exists-sync/-/fs-exists-sync-0.1.0.tgz#982d6893af918e72d08dec9e8673ff2b5a8d6add"
+fs-readdir-recursive@^1.0.0:
+  version "1.0.0"
+  resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/fs-readdir-recursive/-/fs-readdir-recursive-1.0.0.tgz#8cd1745c8b4f8a29c8caec392476921ba195f560"
 
 fs.realpath@^1.0.0:
   version "1.0.0"
   resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/fs.realpath/-/fs.realpath-1.0.0.tgz#1504ad2523158caa40db4a2787cb01411994ea4f"
 
+fsevents@^1.0.0:
+  version "1.0.15"
+  resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/fsevents/-/fsevents-1.0.15.tgz#fa63f590f3c2ad91275e4972a6cea545fb0aae44"
+  dependencies:
+    nan "^2.3.0"
+    node-pre-gyp "^0.6.29"
+
+fstream-ignore@~1.0.5:
+  version "1.0.5"
+  resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/fstream-ignore/-/fstream-ignore-1.0.5.tgz#9c31dae34767018fe1d249b24dada67d092da105"
+  dependencies:
+    fstream "^1.0.0"
+    inherits "2"
+    minimatch "^3.0.0"
+
+fstream@^1.0.0, fstream@^1.0.2, fstream@~1.0.10:
+  version "1.0.10"
+  resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/fstream/-/fstream-1.0.10.tgz#604e8a92fe26ffd9f6fae30399d4984e1ab22822"
+  dependencies:
+    graceful-fs "^4.1.2"
+    inherits "~2.0.0"
+    mkdirp ">=0.5 0"
+    rimraf "2"
+
 function-bind@^1.0.2:
   version "1.1.0"
   resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/function-bind/-/function-bind-1.1.0.tgz#16176714c801798e4e8f2cf7f7529467bb4a5771"
+
+gauge@~2.6.0:
+  version "2.6.0"
+  resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/gauge/-/gauge-2.6.0.tgz#d35301ad18e96902b4751dcbbe40f4218b942a46"
+  dependencies:
+    aproba "^1.0.3"
+    console-control-strings "^1.0.0"
+    has-color "^0.1.7"
+    has-unicode "^2.0.0"
+    object-assign "^4.1.0"
+    signal-exit "^3.0.0"
+    string-width "^1.0.1"
+    strip-ansi "^3.0.1"
+    wide-align "^1.1.0"
 
 generate-function@^2.0.0:
   version "2.0.0"
@@ -1406,7 +1622,7 @@ glob-parent@^2.0.0:
   dependencies:
     is-glob "^2.0.0"
 
-glob@^5.0.15, glob@5.x:
+glob@^5.0.15, glob@^5.0.5, glob@5.x:
   version "5.0.15"
   resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/glob/-/glob-5.0.15.tgz#1bc936b9e02f4a603fcc222ecf7633d30b8b93b1"
   dependencies:
@@ -1427,22 +1643,6 @@ glob@^7.0.0, glob@^7.0.3, glob@^7.0.5:
     once "^1.3.0"
     path-is-absolute "^1.0.0"
 
-global-modules@^0.2.3:
-  version "0.2.3"
-  resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/global-modules/-/global-modules-0.2.3.tgz#ea5a3bed42c6d6ce995a4f8a1269b5dae223828d"
-  dependencies:
-    global-prefix "^0.1.4"
-    is-windows "^0.2.0"
-
-global-prefix@^0.1.4:
-  version "0.1.4"
-  resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/global-prefix/-/global-prefix-0.1.4.tgz#05158db1cde2dd491b455e290eb3ab8bfc45c6e1"
-  dependencies:
-    ini "^1.3.4"
-    is-windows "^0.2.0"
-    osenv "^0.1.3"
-    which "^1.2.10"
-
 globals@^9.0.0, globals@^9.2.0:
   version "9.13.0"
   resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/globals/-/globals-9.13.0.tgz#d97706b61600d8dbe94708c367d3fdcf48470b8f"
@@ -1458,7 +1658,7 @@ globby@^5.0.0:
     pify "^2.0.0"
     pinkie-promise "^2.0.0"
 
-graceful-fs@^4.1.2, graceful-fs@^4.1.6:
+graceful-fs@^4.1.2, graceful-fs@^4.1.4, graceful-fs@^4.1.6:
   version "4.1.10"
   resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/graceful-fs/-/graceful-fs-4.1.10.tgz#f2d720c22092f743228775c75e3612632501f131"
 
@@ -1495,15 +1695,17 @@ has-ansi@^2.0.0:
   dependencies:
     ansi-regex "^2.0.0"
 
+has-color@^0.1.7:
+  version "0.1.7"
+  resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/has-color/-/has-color-0.1.7.tgz#67144a5260c34fc3cca677d041daf52fe7b78b2f"
+
 has-flag@^1.0.0:
   version "1.0.0"
   resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/has-flag/-/has-flag-1.0.0.tgz#9d9e793165ce017a00f00418c43f942a7b1d11fa"
 
-has-glob@^0.1.1:
-  version "0.1.1"
-  resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/has-glob/-/has-glob-0.1.1.tgz#a261c4c2a6c667e0c77b700a7f297c39ef3aa589"
-  dependencies:
-    is-glob "^2.0.1"
+has-unicode@^2.0.0:
+  version "2.0.1"
+  resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/has-unicode/-/has-unicode-2.0.1.tgz#e0e6fe6a28cf51138855e086d1691e771de2a8b9"
 
 has@^1.0.1:
   version "1.0.1"
@@ -1568,7 +1770,7 @@ inflight@^1.0.4:
     once "^1.3.0"
     wrappy "1"
 
-inherits@~2.0.1, inherits@2:
+inherits@^2.0.1, inherits@~2.0.0, inherits@~2.0.1, inherits@2:
   version "2.0.3"
   resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/inherits/-/inherits-2.0.3.tgz#633c2c83e3da42a502f52466022480f4208261de"
 
@@ -1576,7 +1778,7 @@ inherits@2.0.1:
   version "2.0.1"
   resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/inherits/-/inherits-2.0.1.tgz#b17d08d326b4423e568eff719f91b0b1cbdf69f1"
 
-ini@^1.3.4:
+ini@~1.3.0:
   version "1.3.4"
   resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/ini/-/ini-1.3.4.tgz#0537cb79daf59b59a1a517dff706c86ec039162e"
 
@@ -1616,6 +1818,12 @@ is-arrayish@^0.2.1:
   version "0.2.1"
   resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/is-arrayish/-/is-arrayish-0.2.1.tgz#77c99840527aa8ecb1a8ba697b80645a7a926a9d"
 
+is-binary-path@^1.0.0:
+  version "1.0.1"
+  resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/is-binary-path/-/is-binary-path-1.0.1.tgz#75f16642b480f187a711c814161fd3a4a7655898"
+  dependencies:
+    binary-extensions "^1.0.0"
+
 is-buffer@^1.0.2:
   version "1.1.4"
   resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/is-buffer/-/is-buffer-1.1.4.tgz#cfc86ccd5dc5a52fa80489111c6920c457e2d98b"
@@ -1642,7 +1850,7 @@ is-equal-shallow@^0.1.3:
   dependencies:
     is-primitive "^2.0.0"
 
-is-extendable@^0.1.0, is-extendable@^0.1.1:
+is-extendable@^0.1.1:
   version "0.1.1"
   resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/is-extendable/-/is-extendable-0.1.1.tgz#62b110e289a471418e3ec36a617d472e301dfc89"
 
@@ -1732,14 +1940,6 @@ is-typedarray@~1.0.0:
 is-utf8@^0.2.0:
   version "0.2.1"
   resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/is-utf8/-/is-utf8-0.2.1.tgz#4b0da1442104d1b336340e80797e865cf39f7d72"
-
-is-valid-glob@^0.3.0:
-  version "0.3.0"
-  resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/is-valid-glob/-/is-valid-glob-0.3.0.tgz#d4b55c69f51886f9b65c70d6c2622d37e29f48fe"
-
-is-windows@^0.2.0:
-  version "0.2.0"
-  resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/is-windows/-/is-windows-0.2.0.tgz#de1aa6d63ea29dd248737b69f1ff8b8002d2108c"
 
 isarray@^1.0.0, isarray@~1.0.0, isarray@1.0.0:
   version "1.0.0"
@@ -2136,12 +2336,6 @@ lazy-cache@^1.0.3:
   version "1.0.4"
   resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/lazy-cache/-/lazy-cache-1.0.4.tgz#a1d78fc3a50474cb80845d3b3b6e1da49a446e8e"
 
-lazy-cache@^2.0.1:
-  version "2.0.2"
-  resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/lazy-cache/-/lazy-cache-2.0.2.tgz#b9190a4f913354694840859f8a8f7084d8822264"
-  dependencies:
-    set-getter "^0.1.0"
-
 lcid@^1.0.0:
   version "1.0.0"
   resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/lcid/-/lcid-1.0.0.tgz#308accafa0bc483a3867b4b6f2b9506251d1b835"
@@ -2238,6 +2432,10 @@ lodash.keys@^3.0.0:
     lodash.isarguments "^3.0.0"
     lodash.isarray "^3.0.0"
 
+lodash.some@^4.6.0:
+  version "4.6.0"
+  resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/lodash.some/-/lodash.some-4.6.0.tgz#1bb9f314ef6b8baded13b549169b2a945eb68e4d"
+
 lodash@^4.0.0, lodash@^4.2.0, lodash@^4.3.0:
   version "4.17.1"
   resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/lodash/-/lodash-4.17.1.tgz#e75eaf17a34730c6491d9956f4d81f3a044f01bf"
@@ -2276,25 +2474,11 @@ marked@^0.3.6:
   version "0.3.6"
   resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/marked/-/marked-0.3.6.tgz#b2c6c618fccece4ef86c4fc6cb8a7cbf5aeda8d7"
 
-matched@^0.4.3:
-  version "0.4.4"
-  resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/matched/-/matched-0.4.4.tgz#56d7b7eb18033f0cf9bc52eb2090fac7dc1e89fa"
-  dependencies:
-    arr-union "^3.1.0"
-    async-array-reduce "^0.2.0"
-    extend-shallow "^2.0.1"
-    fs-exists-sync "^0.1.0"
-    glob "^7.0.5"
-    has-glob "^0.1.1"
-    is-valid-glob "^0.3.0"
-    lazy-cache "^2.0.1"
-    resolve-dir "^0.1.0"
-
 merge@^1.1.3:
   version "1.2.0"
   resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/merge/-/merge-1.2.0.tgz#7531e39d4949c281a66b8c5a6e0265e8b05894da"
 
-micromatch@^2.3.11:
+micromatch@^2.1.5, micromatch@^2.3.11:
   version "2.3.11"
   resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/micromatch/-/micromatch-2.3.11.tgz#86677c97d1720b363431d04d0d15293bd38c1565"
   dependencies:
@@ -2334,7 +2518,7 @@ minimatch@2.x:
   dependencies:
     brace-expansion "^1.0.0"
 
-minimist@^1.1.1:
+minimist@^1.1.1, minimist@^1.2.0:
   version "1.2.0"
   resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/minimist/-/minimist-1.2.0.tgz#a35008b20f41383eec1fb914f4cd5df79a264284"
 
@@ -2346,17 +2530,11 @@ minimist@0.0.8:
   version "0.0.8"
   resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/minimist/-/minimist-0.0.8.tgz#857fcabfc3397d2625b8228262e86aa7a011b05d"
 
-mkdirp@^0.5.0, mkdirp@^0.5.1, mkdirp@0.5.x:
+mkdirp@^0.5.0, mkdirp@^0.5.1, "mkdirp@>=0.5 0", mkdirp@~0.5.1, mkdirp@0.5.x:
   version "0.5.1"
   resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/mkdirp/-/mkdirp-0.5.1.tgz#30057438eac6cf7f8c4767f38648d6697d75c903"
   dependencies:
     minimist "0.0.8"
-
-modify-babel-preset@^2.1.1:
-  version "2.1.1"
-  resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/modify-babel-preset/-/modify-babel-preset-2.1.1.tgz#2d3190162ee62fb67aaa3325c242f026322ebbac"
-  dependencies:
-    require-relative "^0.8.7"
 
 ms@0.7.1:
   version "0.7.1"
@@ -2378,6 +2556,10 @@ multimatch@^2.1.0:
 mute-stream@0.0.5:
   version "0.0.5"
   resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/mute-stream/-/mute-stream-0.0.5.tgz#8fbfabb0a98a253d3184331f9e8deb7372fac6c0"
+
+nan@^2.3.0:
+  version "2.4.0"
+  resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/nan/-/nan-2.4.0.tgz#fb3c59d45fe4effe215f0b890f8adf6eb32d2232"
 
 natural-compare@^1.4.0:
   version "1.4.0"
@@ -2412,11 +2594,25 @@ node-notifier@^4.6.1:
     shellwords "^0.1.0"
     which "^1.0.5"
 
+node-pre-gyp@^0.6.29:
+  version "0.6.31"
+  resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/node-pre-gyp/-/node-pre-gyp-0.6.31.tgz#d8a00ddaa301a940615dbcc8caad4024d58f6017"
+  dependencies:
+    mkdirp "~0.5.1"
+    nopt "~3.0.6"
+    npmlog "^4.0.0"
+    rc "~1.1.6"
+    request "^2.75.0"
+    rimraf "~2.5.4"
+    semver "~5.3.0"
+    tar "~2.2.1"
+    tar-pack "~3.3.0"
+
 node-uuid@~1.4.7:
   version "1.4.7"
   resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/node-uuid/-/node-uuid-1.4.7.tgz#6da5a17668c4b3dd59623bda11cf7fa4c1f60a6f"
 
-nopt@3.x:
+nopt@~3.0.6, nopt@3.x:
   version "3.0.6"
   resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/nopt/-/nopt-3.0.6.tgz#c6465dbf08abcd4db359317f79ac68a646b28ff9"
   dependencies:
@@ -2434,6 +2630,15 @@ normalize-package-data@^2.3.2:
 normalize-path@^2.0.1:
   version "2.0.1"
   resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/normalize-path/-/normalize-path-2.0.1.tgz#47886ac1662760d4261b7d979d241709d3ce3f7a"
+
+npmlog@^4.0.0:
+  version "4.0.0"
+  resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/npmlog/-/npmlog-4.0.0.tgz#e094503961c70c1774eb76692080e8d578a9f88f"
+  dependencies:
+    are-we-there-yet "~1.1.2"
+    console-control-strings "~1.1.0"
+    gauge "~2.6.0"
+    set-blocking "~2.0.0"
 
 number-is-nan@^1.0.0:
   version "1.0.1"
@@ -2464,6 +2669,12 @@ once@^1.3.0, once@1.x:
   dependencies:
     wrappy "1"
 
+once@~1.3.3:
+  version "1.3.3"
+  resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/once/-/once-1.3.3.tgz#b2e261557ce4c314ec8304f3fa82663e4297ca20"
+  dependencies:
+    wrappy "1"
+
 onetime@^1.0.0:
   version "1.1.0"
   resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/onetime/-/onetime-1.1.0.tgz#a1f7838f8314c516f05ecefcbc4ccfe04b4ed789"
@@ -2486,7 +2697,7 @@ optionator@^0.8.1, optionator@^0.8.2:
     type-check "~0.3.2"
     wordwrap "~1.0.0"
 
-os-homedir@^1.0.0, os-homedir@^1.0.1:
+os-homedir@^1.0.0:
   version "1.0.2"
   resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/os-homedir/-/os-homedir-1.0.2.tgz#ffbc4988336e0e833de0c168c7ef152121aa7fb3"
 
@@ -2496,16 +2707,17 @@ os-locale@^1.4.0:
   dependencies:
     lcid "^1.0.0"
 
-os-tmpdir@^1.0.0, os-tmpdir@^1.0.1:
+os-tmpdir@^1.0.1:
   version "1.0.2"
   resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/os-tmpdir/-/os-tmpdir-1.0.2.tgz#bbe67406c79aa85c5cfec766fe5734555dfa1274"
 
-osenv@^0.1.3:
-  version "0.1.3"
-  resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/osenv/-/osenv-0.1.3.tgz#83cf05c6d6458fc4d5ac6362ea325d92f2754217"
+output-file-sync@^1.1.0:
+  version "1.1.2"
+  resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/output-file-sync/-/output-file-sync-1.1.2.tgz#d0a33eefe61a205facb90092e826598d5245ce76"
   dependencies:
-    os-homedir "^1.0.0"
-    os-tmpdir "^1.0.0"
+    graceful-fs "^4.1.4"
+    mkdirp "^0.5.1"
+    object-assign "^4.1.0"
 
 parse-glob@^3.0.4:
   version "3.0.4"
@@ -2631,6 +2843,15 @@ randomatic@^1.1.3:
     is-number "^2.0.2"
     kind-of "^3.0.2"
 
+rc@~1.1.6:
+  version "1.1.6"
+  resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/rc/-/rc-1.1.6.tgz#43651b76b6ae53b5c802f1151fa3fc3b059969c9"
+  dependencies:
+    deep-extend "~0.4.0"
+    ini "~1.3.0"
+    minimist "^1.2.0"
+    strip-json-comments "~1.0.4"
+
 react-addons-test-utils@^15.3.2:
   version "15.3.2"
   resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/react-addons-test-utils/-/react-addons-test-utils-15.3.2.tgz#c09a44f583425a4a9c1b38444d7a6c3e6f0f41f6"
@@ -2658,6 +2879,18 @@ read-pkg@^1.0.0:
     normalize-package-data "^2.3.2"
     path-type "^1.0.0"
 
+"readable-stream@^2.0.0 || ^1.1.13", readable-stream@^2.0.2:
+  version "2.2.2"
+  resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/readable-stream/-/readable-stream-2.2.2.tgz#a9e6fec3c7dda85f8bb1b3ba7028604556fc825e"
+  dependencies:
+    buffer-shims "^1.0.0"
+    core-util-is "~1.0.0"
+    inherits "~2.0.1"
+    isarray "~1.0.0"
+    process-nextick-args "~1.0.6"
+    string_decoder "~0.10.x"
+    util-deprecate "~1.0.1"
+
 readable-stream@~2.0.0:
   version "2.0.6"
   resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/readable-stream/-/readable-stream-2.0.6.tgz#8f90341e68a53ccc928788dacfcd11b36eb9b78e"
@@ -2668,6 +2901,27 @@ readable-stream@~2.0.0:
     process-nextick-args "~1.0.6"
     string_decoder "~0.10.x"
     util-deprecate "~1.0.1"
+
+readable-stream@~2.1.4:
+  version "2.1.5"
+  resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/readable-stream/-/readable-stream-2.1.5.tgz#66fa8b720e1438b364681f2ad1a63c618448c9d0"
+  dependencies:
+    buffer-shims "^1.0.0"
+    core-util-is "~1.0.0"
+    inherits "~2.0.1"
+    isarray "~1.0.0"
+    process-nextick-args "~1.0.6"
+    string_decoder "~0.10.x"
+    util-deprecate "~1.0.1"
+
+readdirp@^2.0.0:
+  version "2.1.0"
+  resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/readdirp/-/readdirp-2.1.0.tgz#4ed0ad060df3073300c48440373f72d1cc642d78"
+  dependencies:
+    graceful-fs "^4.1.2"
+    minimatch "^3.0.2"
+    readable-stream "^2.0.2"
+    set-immediate-shim "^1.0.1"
 
 readline2@^1.0.1:
   version "1.0.1"
@@ -2736,7 +2990,7 @@ repeating@^2.0.0:
   dependencies:
     is-finite "^1.0.0"
 
-request@^2.55.0:
+request@^2.55.0, request@^2.75.0:
   version "2.78.0"
   resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/request/-/request-2.78.0.tgz#e1c8dec346e1c81923b24acdb337f11decabe9cc"
   dependencies:
@@ -2769,23 +3023,12 @@ require-main-filename@^1.0.1:
   version "1.0.1"
   resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/require-main-filename/-/require-main-filename-1.0.1.tgz#97f717b69d48784f5f526a6c5aa8ffdda055a4d1"
 
-require-relative@^0.8.7:
-  version "0.8.7"
-  resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/require-relative/-/require-relative-0.8.7.tgz#7999539fc9e047a37928fa196f8e1563dabd36de"
-
 require-uncached@^1.0.2:
   version "1.0.3"
   resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/require-uncached/-/require-uncached-1.0.3.tgz#4e0d56d6c9662fd31e43011c4b95aa49955421d3"
   dependencies:
     caller-path "^0.1.0"
     resolve-from "^1.0.0"
-
-resolve-dir@^0.1.0:
-  version "0.1.1"
-  resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/resolve-dir/-/resolve-dir-0.1.1.tgz#b219259a5602fac5c5c496ad894a6e8cc430261e"
-  dependencies:
-    expand-tilde "^1.2.2"
-    global-modules "^0.2.3"
 
 resolve-from@^1.0.0:
   version "1.0.1"
@@ -2808,39 +3051,11 @@ right-align@^0.1.1:
   dependencies:
     align-text "^0.1.1"
 
-rimraf@^2.2.8, rimraf@^2.4.3, rimraf@^2.4.4, rimraf@^2.5.1:
+rimraf@^2.2.8, rimraf@^2.4.3, rimraf@^2.4.4, rimraf@^2.5.1, rimraf@~2.5.1, rimraf@~2.5.4, rimraf@2:
   version "2.5.4"
   resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/rimraf/-/rimraf-2.5.4.tgz#96800093cbf1a0c86bd95b4625467535c29dfa04"
   dependencies:
     glob "^7.0.5"
-
-rollup-plugin-babel@^2.3.9:
-  version "2.6.1"
-  resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/rollup-plugin-babel/-/rollup-plugin-babel-2.6.1.tgz#470b03486337045d7e8a3e43fc5fc00e8db82c26"
-  dependencies:
-    babel-core "6"
-    babel-plugin-transform-es2015-classes "^6.9.0"
-    object-assign "^4.1.0"
-    rollup-pluginutils "^1.5.0"
-
-rollup-plugin-multi-entry@^2.0.1:
-  version "2.0.1"
-  resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/rollup-plugin-multi-entry/-/rollup-plugin-multi-entry-2.0.1.tgz#4b3aea8ddc5afc9b7f9ffbfb1441c04ef39071b4"
-  dependencies:
-    matched "^0.4.3"
-
-rollup-pluginutils@^1.5.0:
-  version "1.5.2"
-  resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/rollup-pluginutils/-/rollup-pluginutils-1.5.2.tgz#1e156e778f94b7255bfa1b3d0178be8f5c552408"
-  dependencies:
-    estree-walker "^0.2.1"
-    minimatch "^3.0.2"
-
-rollup@^0.36.3:
-  version "0.36.3"
-  resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/rollup/-/rollup-0.36.3.tgz#c89ac479828924ff8f69c1d44541cb4ea2fc11fc"
-  dependencies:
-    source-map-support "^0.4.0"
 
 run-async@^0.1.0:
   version "0.1.0"
@@ -2875,19 +3090,17 @@ sax@^1.1.4:
   version "1.2.1"
   resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/sax/-/sax-1.2.1.tgz#7b8e656190b228e81a66aea748480d828cd2d37a"
 
-semver@^5.1.0, semver@^5.3.0, "semver@2 || 3 || 4 || 5":
+semver@^5.1.0, semver@^5.3.0, semver@~5.3.0, "semver@2 || 3 || 4 || 5":
   version "5.3.0"
   resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/semver/-/semver-5.3.0.tgz#9b2ce5d3de02d17c6012ad326aa6b4d0cf54f94f"
 
-set-blocking@^2.0.0:
+set-blocking@^2.0.0, set-blocking@~2.0.0:
   version "2.0.0"
   resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/set-blocking/-/set-blocking-2.0.0.tgz#045f9782d011ae9a6803ddd382b24392b3d890f7"
 
-set-getter@^0.1.0:
-  version "0.1.0"
-  resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/set-getter/-/set-getter-0.1.0.tgz#d769c182c9d5a51f409145f2fba82e5e86e80376"
-  dependencies:
-    to-object-path "^0.3.0"
+set-immediate-shim@^1.0.1:
+  version "1.0.1"
+  resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/set-immediate-shim/-/set-immediate-shim-1.0.1.tgz#4b2b1b27eb808a9f8dcc481a58e5e56f599f3f61"
 
 shelljs@^0.7.5:
   version "0.7.5"
@@ -2900,6 +3113,10 @@ shelljs@^0.7.5:
 shellwords@^0.1.0:
   version "0.1.0"
   resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/shellwords/-/shellwords-0.1.0.tgz#66afd47b6a12932d9071cbfd98a52e785cd0ba14"
+
+signal-exit@^3.0.0:
+  version "3.0.1"
+  resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/signal-exit/-/signal-exit-3.0.1.tgz#5a4c884992b63a7acd9badb7894c3ee9cfccad81"
 
 sinon@^1.17.3:
   version "1.17.6"
@@ -2924,7 +3141,7 @@ sntp@1.x.x:
   dependencies:
     hoek "2.x.x"
 
-source-map-support@^0.4.0, source-map-support@^0.4.2:
+source-map-support@^0.4.2:
   version "0.4.6"
   resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/source-map-support/-/source-map-support-0.4.6.tgz#32552aa64b458392a85eab3b0b5ee61527167aeb"
   dependencies:
@@ -3022,7 +3239,7 @@ strip-bom@^3.0.0:
   version "3.0.0"
   resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/strip-bom/-/strip-bom-3.0.0.tgz#2334c18e9c759f7bdd56fdef7e9ae3d588e68ed3"
 
-strip-json-comments@~1.0.1:
+strip-json-comments@~1.0.1, strip-json-comments@~1.0.4:
   version "1.0.4"
   resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/strip-json-comments/-/strip-json-comments-1.0.4.tgz#1e15fbcac97d3ee99bf2d73b4c656b082bbafb91"
 
@@ -3050,6 +3267,27 @@ table@^3.7.8:
     lodash "^4.0.0"
     slice-ansi "0.0.4"
     string-width "^2.0.0"
+
+tar-pack@~3.3.0:
+  version "3.3.0"
+  resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/tar-pack/-/tar-pack-3.3.0.tgz#30931816418f55afc4d21775afdd6720cee45dae"
+  dependencies:
+    debug "~2.2.0"
+    fstream "~1.0.10"
+    fstream-ignore "~1.0.5"
+    once "~1.3.3"
+    readable-stream "~2.1.4"
+    rimraf "~2.5.1"
+    tar "~2.2.1"
+    uid-number "~0.0.6"
+
+tar@~2.2.1:
+  version "2.2.1"
+  resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/tar/-/tar-2.2.1.tgz#8e4d2a256c0e2185c6b18ad694aec968b83cb1d1"
+  dependencies:
+    block-stream "*"
+    fstream "^1.0.2"
+    inherits "2"
 
 test-exclude@^2.1.1:
   version "2.1.3"
@@ -3080,12 +3318,6 @@ tmpl@1.0.x:
 to-fast-properties@^1.0.1:
   version "1.0.2"
   resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/to-fast-properties/-/to-fast-properties-1.0.2.tgz#f3f5c0c3ba7299a7ef99427e44633257ade43320"
-
-to-object-path@^0.3.0:
-  version "0.3.0"
-  resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/to-object-path/-/to-object-path-0.3.0.tgz#297588b7b0e7e0ac08e04e672f85c1f4999e17af"
-  dependencies:
-    kind-of "^3.0.2"
 
 tough-cookie@^2.3.1, tough-cookie@~2.3.0:
   version "2.3.2"
@@ -3136,6 +3368,14 @@ uglify-to-browserify@~1.0.0:
   version "1.0.2"
   resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/uglify-to-browserify/-/uglify-to-browserify-1.0.2.tgz#6e0924d6bda6b5afe349e39a6d632850a0f882b7"
 
+uid-number@~0.0.6:
+  version "0.0.6"
+  resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/uid-number/-/uid-number-0.0.6.tgz#0ea10e8035e8eb5b8e4449f06da1c730663baa81"
+
+user-home@^1.1.1:
+  version "1.1.1"
+  resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/user-home/-/user-home-1.1.1.tgz#2b5be23a32b63a7c9deb8d0f28d485724a3df190"
+
 user-home@^2.0.0:
   version "2.0.0"
   resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/user-home/-/user-home-2.0.0.tgz#9c70bfd8169bc1dcbf48604e0f04b8b49cde9e9f"
@@ -3151,6 +3391,12 @@ util-deprecate@~1.0.1:
   resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/util/-/util-0.10.3.tgz#7afb1afe50805246489e3db7fe0ed379336ac0f9"
   dependencies:
     inherits "2.0.1"
+
+v8flags@^2.0.10:
+  version "2.0.11"
+  resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/v8flags/-/v8flags-2.0.11.tgz#bca8f30f0d6d60612cc2c00641e6962d42ae6881"
+  dependencies:
+    user-home "^1.1.1"
 
 validate-npm-package-license@^3.0.1:
   version "3.0.1"
@@ -3200,11 +3446,17 @@ which-module@^1.0.0:
   version "1.0.0"
   resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/which-module/-/which-module-1.0.0.tgz#bba63ca861948994ff307736089e3b96026c2a4f"
 
-which@^1.0.5, which@^1.1.1, which@^1.2.10:
+which@^1.0.5, which@^1.1.1:
   version "1.2.12"
   resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/which/-/which-1.2.12.tgz#de67b5e450269f194909ef23ece4ebe416fa1192"
   dependencies:
     isexe "^1.1.1"
+
+wide-align@^1.1.0:
+  version "1.1.0"
+  resolved "https://artifactory.twitter.biz:443/api/npm/js-virtual/wide-align/-/wide-align-1.1.0.tgz#40edde802a71fea1f070da3e62dcda2e7add96ad"
+  dependencies:
+    string-width "^1.0.1"
 
 window-size@^0.2.0:
   version "0.2.0"
