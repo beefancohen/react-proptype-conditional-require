@@ -8,7 +8,6 @@
     "clean": "rimraf reports npm-debug.log yarn-error.log dist",
     "coveralls": "cat ./reports/lcov.info | coveralls",
     "lint": "eslint --config .eslintrc __tests__/**/*-test.js isRequiredIf.js",
-    "posttest": "npm run clean",
     "prebuild": "npm run clean && npm run lint && npm run test && mkdir dist",
     "prepublish": "npm run build",
     "test": "jest --coverage"
