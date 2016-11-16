@@ -3,3 +3,5 @@ dist
 npm-debug.log
 reports
 yarn-error.log
+index.js
+.DS_Store
