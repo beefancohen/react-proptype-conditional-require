@@ -3,8 +3,13 @@
   "version": "1.0.3",
   "description": "Conditionally require a React proptype based on other props and/or other conditions.",
   "main": "dist/isRequiredIf.js",
+  "files": [
+    "index.js"
+  ],
   "scripts": {
-    "build": "NODE_ENV=production babel isRequiredIf.js --out-file dist/isRequiredIf.js -s",
+    "build:dist": "babel isRequiredIf.js --out-file dist/isRequiredIf.js -s",
+    "build:index": "babel isRequiredIf.js --out-file index.js --source-maps inline",
+    "build": "NODE_ENV=production npm run build:dist && NODE_ENV=production npm run build:index",
     "clean": "rimraf reports npm-debug.log yarn-error.log dist",
     "coveralls": "cat ./reports/lcov.info | coveralls",
     "lint": "eslint --config .eslintrc __tests__/**/*-test.js isRequiredIf.js",
