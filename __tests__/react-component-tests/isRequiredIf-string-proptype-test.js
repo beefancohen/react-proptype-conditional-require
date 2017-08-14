@@ -2,7 +2,8 @@
 import assert from 'assert';
 import { createRenderer } from 'react-addons-test-utils';
 import { sandbox } from 'sinon';
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import isRequiredIf from '../../isRequiredIf';
 
 const { string } = PropTypes;
