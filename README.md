@@ -29,7 +29,8 @@ $ npm install --save react-proptype-conditional-require
 # example
 
 ``` js
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import isRequiredIf from 'react-proptype-conditional-require';
 
 const Hello = props => <div className={props.className}>Hello {props.value}!</div>;
@@ -72,7 +73,8 @@ A function that takes the arguments (props, propName, componentName) and returns
 **NOTE: All of the React built-in proptypes use this signature and you will usually use them to specify the typeValidator**:
 
 ```js
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import isRequiredIf from 'react-proptype-conditional-require';
 
 const { string, bool } = PropTypes;
@@ -93,7 +95,8 @@ A boolean *or* function that returns a truthy value that indicates whether the p
 A common use case:
 
 ```js
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import isRequiredIf from 'react-proptype-conditional-require';
 
 const { string } = PropTypes;
@@ -114,7 +117,8 @@ In that case, the labelClassName will only be required if label is passed.
 A string that specifies the custom error message that you would like to provide if the prop is required but missing. If not provided, the error message used by React will be default.
 
 ```js
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import isRequiredIf from 'react-proptype-conditional-require';
 
 const { string } = PropTypes;

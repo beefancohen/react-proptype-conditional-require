@@ -1,6 +1,6 @@
 {
   "name": "react-proptype-conditional-require",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Conditionally require a React proptype based on other props and/or other conditions.",
   "main": "dist/isRequiredIf.js",
   "files": [
@@ -41,16 +41,17 @@
     "babel-preset-es2015": "^6.18.0",
     "babel-preset-react": "^6.3.13",
     "coveralls": "^2.11.15",
-    "eslint-config-airbnb-base": "^10.0.1",
+    "eslint": "^3.10.1",
     "eslint-config-airbnb": "^13.0.0",
+    "eslint-config-airbnb-base": "^10.0.1",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^2.2.3",
     "eslint-plugin-react": "^6.7.1",
-    "eslint": "^3.10.1",
     "jest": "^17.0.2",
+    "prop-types": "^15.5.10",
+    "react": "^15.3.2",
     "react-addons-test-utils": "^15.3.2",
     "react-dom": "^15.3.2",
-    "react": "^15.3.2",
     "rimraf": "^2.5.1",
     "sinon": "^1.17.3"
   },

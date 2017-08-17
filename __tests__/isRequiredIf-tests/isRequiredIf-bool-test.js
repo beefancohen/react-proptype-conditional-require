@@ -1,6 +1,6 @@
 /* eslint-env mocha */
 import assert from 'assert';
-import { PropTypes } from 'react';
+import PropTypes from 'prop-types';
 import isRequiredIf from '../../isRequiredIf';
 
 const { string } = PropTypes;
